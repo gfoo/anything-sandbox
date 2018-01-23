@@ -1,0 +1,17 @@
+<mat-toolbar color="warn">
+  <button matTooltip="Home" mat-icon-button (click)="onHome()">
+    <mat-icon>home</mat-icon>
+  </button>
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+  <span *ngIf="user">
+    Email: {{ user?.email }}
+  </span>
+  <button matTooltip="Logout" mat-icon-button (click)="onLogout()" *ngIf="user">
+    <mat-icon>power_settings_new</mat-icon>
+  </button>
+  <button matTooltip="Logout" mat-icon-button routerLink="/settings" *ngIf="user">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <a *ngIf="!user" matTooltip="Sign in" mat-raised-button color="warn" routerLink="/signin">Sign in</a>
+</mat-toolbar>
