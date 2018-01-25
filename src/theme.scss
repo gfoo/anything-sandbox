@@ -70,9 +70,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 }
 
 $custom-typography: mat-typography-config(
-  $font-family: 'Arial, sans-serif',
-  $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500)
+  $font-family: 'Arial, sans-serif'
 );
 
 
@@ -81,4 +79,8 @@ $custom-typography: mat-typography-config(
 
 body {
   background-image: url('/assets/images/bg-main.gif');
+}
+
+h1 {
+  font-family: 'Lane Narrow, sans-serif'
 }
