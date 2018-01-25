@@ -1,3 +1,4 @@
+import { BackendService } from "./services/backend.service";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -32,7 +33,8 @@ import { ErrorPageComponent } from './views/error-page/error-page.component';
     HttpClientModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    BackendService
   ],
   bootstrap: [AppComponent]
 })

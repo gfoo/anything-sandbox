@@ -1,3 +1,23 @@
-<p>
-  signin works!
-</p>
+<div class="signin-box" fxLayout="row" fxLayoutAlign="space-around center">
+  <mat-card>
+    <mat-toolbar>
+      <h2>
+        <span>Sign in to Anything</span>
+      </h2>
+    </mat-toolbar>
+    <mat-card-content>
+      <form class="signin-container" (ngSubmit)="authenticate()">
+        <mat-form-field>
+          <!-- <mat-icon matPrefix>person</mat-icon> -->
+          <input matInput placeholder="Email" required autofocus name="email">
+        </mat-form-field>
+        <mat-form-field>
+          <!-- <mat-icon matPrefix>lock</mat-icon> -->
+          <input matInput placeholder="Password" type="password" required name="password">
+        </mat-form-field>
+        <button mat-raised-button color="warn" type="submit">Sign in
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

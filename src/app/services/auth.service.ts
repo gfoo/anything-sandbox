@@ -5,30 +5,29 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 
-import { environment } from '../../environments/environment';
+import { BackendService } from './backend.service';
 import { UserModel } from '../models/user.model';
 
-const USER_KEY = 'knora-user';
+const USER_KEY = 'user-data';
 
 @Injectable()
 export class AuthService {
-
   public userEvents = new BehaviorSubject<UserModel>(undefined);
 
-  constructor(private http: HttpClient) {
+  constructor(private backendService: BackendService) {
     this.retrieveUser();
   }
 
   authenticate(credentials): Observable<any> {
-    return this.http
-      .post(`${environment.baseUrl}/v2/authentication`, credentials)
-      .do((token: any) => this.storeLoggedInUser(
-        {
+    return this.backendService
+      .login(credentials.email, credentials.password)
+      .do((token: any) =>
+        this.storeLoggedInUser({
           email: credentials.email,
           token: token
-        }));
+        })
+      );
   }
-
 
   storeLoggedInUser(user) {
     window.localStorage.setItem(USER_KEY, JSON.stringify(user));
