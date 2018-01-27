@@ -5,13 +5,13 @@
   <!-- This fills the remaining space of the current row -->
   <span class="fill-remaining-space"></span>
   <span *ngIf="user">
-    Email: {{ user?.email }}
+    <small>{{ user?.email }}</small>
   </span>
+  <button matTooltip="Settings" mat-icon-button routerLink="/settings" *ngIf="user">
+    <mat-icon>settings</mat-icon>
+  </button>
   <button matTooltip="Logout" mat-icon-button (click)="onLogout()" *ngIf="user">
     <mat-icon>power_settings_new</mat-icon>
   </button>
-  <button matTooltip="Logout" mat-icon-button routerLink="/settings" *ngIf="user">
-    <mat-icon>settings</mat-icon>
-  </button>
-  <a *ngIf="!user" matTooltip="Sign in" color="accent" mat-raised-button routerLink="/signin">Sign in</a>
+  <a *ngIf="!user" matTooltip="Sign in" mat-raised-button routerLink="/signin">Sign in</a>
 </mat-toolbar>

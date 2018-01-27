@@ -6,17 +6,18 @@
       </h2>
     </mat-toolbar>
     <mat-card-content>
-      <form class="signin-container" (ngSubmit)="authenticate()">
+      <form class="signin-container" #form="ngForm" (ngSubmit)="authenticate()">
         <mat-form-field>
           <!-- <mat-icon matPrefix>person</mat-icon> -->
-          <input matInput placeholder="Email" required autofocus name="email">
+          <input matInput placeholder="Email" required autofocus name="email" [(ngModel)]="credentials.email">
         </mat-form-field>
         <mat-form-field>
           <!-- <mat-icon matPrefix>lock</mat-icon> -->
-          <input matInput placeholder="Password" type="password" required name="password">
+          <input matInput placeholder="Password" type="password" required name="password" [(ngModel)]="credentials.password">
         </mat-form-field>
-        <button mat-raised-button color="accent" type="submit">Sign in
+        <button mat-raised-button type="submit" [disabled]="form.invalid">Sign in
         </button>
+        <p>TODO: Forgotten password?</p>
       </form>
     </mat-card-content>
   </mat-card>
