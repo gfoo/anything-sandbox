@@ -46,10 +46,10 @@ $mypalette: (
 // Define the color palettes for the theme.
 $primary: mat-palette($mypalette);
 // existing angular orange palette
-$accent: mat-palette($mat-orange);
+$accent: mat-palette($mypalette);
 
 // The warn palette is optional (defaults to red).
-$warn: mat-palette($mat-red);
+$warn: mat-palette($mypalette);
 
 // Define a theme.
 $theme: mat-light-theme($primary, $accent, $warn);
@@ -79,8 +79,16 @@ $custom-typography: mat-typography-config(
 
 body {
   background-image: url('/assets/images/bg-main.gif');
+  margin: 0px;
 }
 
 h1 {
   font-family: 'Lane Narrow, sans-serif'
+}
+
+.mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
 }
