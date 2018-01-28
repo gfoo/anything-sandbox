@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { Router } from '@angular/router';
 
 import { ToolbarComponent } from './toolbar.component';
 import { AppMaterialModule } from '../../app-material.module';
 import { AuthService } from '../../services/auth.service';
-import { BackendService } from './../../services/backend.service';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { UserModel } from '../../models/user.model';
 
 describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
@@ -15,8 +15,19 @@ describe('ToolbarComponent', () => {
     async(() => {
       TestBed.configureTestingModule({
         declarations: [ToolbarComponent],
-        imports: [AppMaterialModule, HttpClientTestingModule, RouterTestingModule],
-        providers: [AuthService, BackendService]
+        imports: [AppMaterialModule],
+        providers: [
+          {
+            provide: AuthService,
+            useClass: class AuthServiceMockup {
+              userEvents = new BehaviorSubject<UserModel>(undefined);
+            }
+          },
+          {
+            provide: Router,
+            useClass: class RouterMockup {}
+          }
+        ]
       }).compileComponents();
     })
   );

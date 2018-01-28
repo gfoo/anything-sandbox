@@ -1,4 +1,3 @@
-import { BackendService } from './services/backend.service';
 import { AuthService } from './services/auth.service';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -26,8 +25,17 @@ describe('AppComponent', () => {
     async(() => {
       TestBed.configureTestingModule({
         declarations: [AppComponent, ToolbarComponent],
-        imports: [RouterTestingModule, AppMaterialModule, HttpClientTestingModule],
-        providers: [AuthService, BackendService]
+        imports: [
+          RouterTestingModule,
+          AppMaterialModule,
+          HttpClientTestingModule
+        ],
+        providers: [
+          {
+            provide: AuthService,
+            useClass: class AuthServiceMockup {}
+          }
+        ]
       }).compileComponents();
     })
   );

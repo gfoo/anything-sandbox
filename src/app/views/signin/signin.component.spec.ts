@@ -1,15 +1,15 @@
-import { FlexLayoutModule } from "@angular/flex-layout";
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppRoutingModule } from './../../app-routing.module';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SigninComponent } from './signin.component';
 import { AppMaterialModule } from '../../app-material.module';
 import { AuthService } from '../../services/auth.service';
 import { BackendService } from './../../services/backend.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { UserModel } from '../../models/user.model';
 
 describe('SigninComponent', () => {
   let component: SigninComponent;
@@ -21,12 +21,21 @@ describe('SigninComponent', () => {
         declarations: [SigninComponent],
         imports: [
           AppMaterialModule,
-          HttpClientTestingModule,
-          RouterTestingModule,
           BrowserAnimationsModule,
           FormsModule
-              ],
-        providers: [AuthService, BackendService]
+        ],
+        providers: [
+          {
+            provide: AuthService,
+            useClass: class AuthServiceMockup {
+              userEvents = new BehaviorSubject<UserModel>(undefined);
+            }
+          },
+          {
+            provide: Router,
+            useClass: class RouterMockup {}
+          }
+        ]
       }).compileComponents();
     })
   );
