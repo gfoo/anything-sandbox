@@ -1,0 +1,94 @@
+// Include non-theme styles for core.
+@import '~@angular/material/theming';
+
+
+
+
+@include mat-core();
+
+// palette generated from http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5
+
+/* For use in src/lib/core/theming/_palette.scss */
+$mypalette: (
+    50 : #f3f2ef,
+    100 : #e2ded6,
+    200 : #cfc9bb,
+    300 : #bcb39f,
+    400 : #ada28b,
+    500 : #9f9276,
+    600 : #978a6e,
+    700 : #8d7f63,
+    800 : #837559,
+    900 : #726346,
+    A100 : #ffeecf,
+    A200 : #ffdc9c,
+    A400 : #ffca69,
+    A700 : #ffc04f,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+// Define the color palettes for the theme.
+$primary: mat-palette($mypalette);
+// existing angular orange palette
+$accent: mat-palette($mypalette);
+
+// The warn palette is optional (defaults to red).
+$warn: mat-palette($mypalette);
+
+// Define a theme.
+$theme: mat-light-theme($primary, $accent, $warn);
+
+// Include all theme styles for the components.
+@include angular-material-theme($theme);
+
+
+@font-face {
+  font-family: 'Lane Narrow';
+  src: url('/assets/fonts/lane.eot');
+  src: url('/assets/fonts/lane.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/lane.woff') format('woff'),
+       url('/assets/fonts/lane.ttf') format('truetype'),
+       url('/assets/fonts/lane.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Arial, sans-serif'
+);
+
+
+//@include mat-base-typography($custom-typography);
+@include angular-material-typography($custom-typography);
+
+body {
+  background-image: url('/assets/images/bg-main.gif');
+  margin: 0px;
+}
+
+h1 {
+  font-family: 'Lane Narrow, sans-serif'
+}
+
+.mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
