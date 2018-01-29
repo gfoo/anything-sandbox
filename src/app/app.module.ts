@@ -15,7 +15,9 @@ import { AuthService } from './services/auth.service';
 import { SettingsComponent } from './views/settings/settings.component';
 import { ErrorPageComponent } from './views/error-page/error-page.component';
 import { BackendService } from './services/backend.service';
-import { ThingsComponent } from './things/things.component';
+import { ThingsComponent } from './views/things/things.component';
+import { SearchesComponent } from './views/searches/searches.component';
+import { FooterComponent } from './views/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ThingsComponent } from './things/things.component';
     SigninComponent,
     SettingsComponent,
     ErrorPageComponent,
-    ThingsComponent
+    ThingsComponent,
+    SearchesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<mat-toolbar class="mat-elevation-z4" color="primary">
+<mat-toolbar class="mat-elevation-z4 lg" color="primary">
   <!-- <button matTooltip="Home" mat-icon-button (click)="onHome()">
     <mat-icon>home</mat-icon>
   </button> -->
@@ -13,17 +13,32 @@
     <button mat-menu-item>Partenaires</button>
   </mat-menu>
 
-  <button mat-button [matMenuTriggerFor]="appMenu" *ngIf="user">
+  <button matTooltip="Présentation" mat-button [matMenuTriggerFor]="appMenu" *ngIf="user">
     Présentation
   </button>
 
-  <button mat-button (click)="onThings()" *ngIf="user">
+  <button matTooltip="Thing list" mat-button (click)="onThings()" *ngIf="user">
     Things
   </button>
 
+  <button matTooltip="Search tools" mat-button (click)="onSearches()" *ngIf="user">
+    Search
+  </button>
+
+  <span class="fill-remaining-space"></span>
+
+  <div class="search-panel" *ngIf="user">
+    <input matInput #search type="search" placeholder="Search..." />
+    <button mat-icon-button (click)="doSearch(search)">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+
+  <mat-divider [inset]="true" [vertical]="true"></mat-divider>
 
   <!-- This fills the remaining space of the current row -->
-  <span class="fill-remaining-space"></span>
+
+
   <span *ngIf="user">
     <small>{{ user?.email }}</small>
   </span>

@@ -1,16 +1,5 @@
-.fill-remaining-space {
-  /* This fills the remaining space, by using flexbox.
-     Every toolbar row uses a flexbox row layout. */
-  flex: 1 1 auto;
-}
-
-.toolbar-logo {
-  display: inline-block;
-  height: 75%;
-  width: 75%;
-}
-
 .search-panel {
+  margin: 10px;
   background-color: whitesmoke;
   border-radius: 4px;
   border-style: solid;
