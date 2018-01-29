@@ -87,6 +87,9 @@ h1 {
 }
 
 .mat-toolbar {
+  background-image:
+    url('/assets/images/pattern.png'),
+    linear-gradient(to bottom, #9f9276, #473c25);
   position: sticky;
   position: -webkit-sticky; /* For macOS/iOS Safari */
   top: 0; /* Sets the sticky toolbar to be on top */

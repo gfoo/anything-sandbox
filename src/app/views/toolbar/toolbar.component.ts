@@ -29,8 +29,8 @@ export class ToolbarComponent implements OnInit, OnDestroy {
     }
   }
 
-  onHome() {
-    this.router.navigate(['/']);
+  onThings() {
+    this.router.navigate(['/things']);
   }
 
   onLogout() {

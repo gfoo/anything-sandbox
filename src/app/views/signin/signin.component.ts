@@ -25,7 +25,6 @@ export class SigninComponent implements OnInit {
         this.router.navigate(['/']);
       },
       error => {
-        console.log('LoginComponent=', error);
         this.authenticationFailed = true;
       }
     );

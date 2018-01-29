@@ -2,9 +2,43 @@
   margin: 10px;
 }
 
+.project-desc {
+  margin: 10px 200px 10px 200px;
+}
+
+.project-subbox mat-card {
+  margin: 30px;
+}
+
 .project-image {
   width: 300px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.partners {
+  min-height: 80px;
+
+  color: #c4c5b4;
+
+  background-color: transparentize(#57570c, .8);
+  box-shadow: 0 1px 2px transparentize(#57570c, .8) inset;
+
+}
+
+.bar {
+  background-image:
+    url('/assets/images/pattern.png'),
+    linear-gradient(to bottom, #9f9276, #473c25);
+  border-bottom: 1px solid #2F291F;
+  box-shadow: 0 1px 2px transparentize(#57570c, .6);
+}
+
+.copyright-bar {
+
+  color: #cfd0c2;
+  text-shadow: 0 1px 0 #2e2f1e;
+  text-transform: uppercase;
+
 }

@@ -1,3 +1,4 @@
+import { ThingsComponent } from "./things/things.component";
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,6 +11,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'settings', component: SettingsComponent },
+  { path: 'things', component: ThingsComponent },
   {
     path: 'not-found',
     component: ErrorPageComponent,

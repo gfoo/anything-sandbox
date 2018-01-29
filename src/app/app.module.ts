@@ -15,6 +15,7 @@ import { AuthService } from './services/auth.service';
 import { SettingsComponent } from './views/settings/settings.component';
 import { ErrorPageComponent } from './views/error-page/error-page.component';
 import { BackendService } from './services/backend.service';
+import { ThingsComponent } from './things/things.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BackendService } from './services/backend.service';
     ToolbarComponent,
     SigninComponent,
     SettingsComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    ThingsComponent
   ],
   imports: [
     BrowserModule,
