@@ -8,6 +8,7 @@ import { ToolbarComponent } from './views/toolbar/toolbar.component';
 import { AppMaterialModule } from './app-material.module';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
+import { FooterComponent } from './views/footer/footer.component';
 
 class AuthServiceMock {
   authenticate(credentials): Observable<any> {
@@ -24,7 +25,7 @@ describe('AppComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [AppComponent, ToolbarComponent],
+        declarations: [AppComponent, ToolbarComponent, FooterComponent],
         imports: [
           RouterTestingModule,
           AppMaterialModule,
