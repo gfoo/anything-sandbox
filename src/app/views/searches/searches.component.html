@@ -1,95 +1,105 @@
 <div class="center">
-<mat-tab-group>
+  <mat-tab-group>
 
-  <mat-tab label="Général">
-    <div class="search-panel">
-      <input matInput #search type="search" (click)="doSearch(search)" placeholder="Search..." />
-      <button mat-icon-button>
-        <mat-icon>search</mat-icon>
-      </button>
-    </div>
-    <br>
-    <mat-checkbox>Fiches bibliographiques</mat-checkbox>
-    <mat-checkbox>Fiches de transcription</mat-checkbox>
-    <mat-checkbox>Personnes</mat-checkbox>
-    <br>
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
+    <mat-tab label="Général">
+      <div class="search-panel">
+        <input matInput (keyup)="onKey($event)" type="search" placeholder="Search..." />
+        <button (click)="doSearch()" mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+      <br>
+      <mat-checkbox>Fiches bibliographiques</mat-checkbox>
+      <mat-checkbox>Fiches de transcription</mat-checkbox>
+      <mat-checkbox>Personnes</mat-checkbox>
+      <br>
 
-  </mat-tab>
+      <div class="example-loading-shade" *ngIf="isInit && isLoadingResults">
+        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+      </div>
+      <mat-table #table [dataSource]="dataSource">
+        <ng-container matColumnDef="label">
+          <mat-header-cell *matHeaderCellDef> Label </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.label}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="rights">
+          <mat-header-cell *matHeaderCellDef> Rights </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.rights}} </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+      <mat-paginator #paginator [pageSize]="nbRows" [length]="resultsLength">
+      </mat-paginator>
 
-  <mat-tab label="Bibliographie">
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-  </mat-tab>
+    </mat-tab>
 
-  <mat-tab label="Personnes">
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-  </mat-tab>
+    <mat-tab label="Bibliographie">
+      <h3>Result 1:</h3>
+      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
+        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
+        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
+        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
+        dolor ad irure fugiat minim id.</p>
+      <h3>Result 1:</h3>
+      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
+        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
+        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
+        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
+        dolor ad irure fugiat minim id.</p>
+    </mat-tab>
 
-  <mat-tab label="Biographie">
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-    <h3>Result 1:</h3>
-    <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt ea
-      Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation. Nisi
-      pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit dolor
-      veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur dolor
-      ad irure fugiat minim id.</p>
-  </mat-tab>
+    <mat-tab label="Personnes">
+      <h3>Result 1:</h3>
+      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
+        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
+        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
+        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
+        dolor ad irure fugiat minim id.</p>
+      <h3>Result 1:</h3>
+      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
+        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
+        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
+        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
+        dolor ad irure fugiat minim id.</p>
+    </mat-tab>
 
-</mat-tab-group>
+    <mat-tab label="Biographie">
+      <h3>Result 1:</h3>
+      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
+        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
+        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
+        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
+        dolor ad irure fugiat minim id.</p>
+      <h3>Result 1:</h3>
+      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
+        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
+        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
+        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
+        dolor ad irure fugiat minim id.</p>
+      <h3>Result 1:</h3>
+      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
+        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
+        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
+        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
+        dolor ad irure fugiat minim id.</p>
+      <h3>Result 1:</h3>
+      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
+        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
+        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
+        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
+        dolor ad irure fugiat minim id.</p>
+      <h3>Result 1:</h3>
+      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
+        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
+        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
+        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
+        dolor ad irure fugiat minim id.</p>
+    </mat-tab>
+
+  </mat-tab-group>
 </div>
