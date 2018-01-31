@@ -40,6 +40,9 @@ export class ToolbarComponent implements OnInit, OnDestroy {
   onEdit() {
     this.router.navigate(['/edition']);
   }
+  onProjects() {
+    this.router.navigate(['/projects']);
+  }
 
   onLogout() {
     event.preventDefault();

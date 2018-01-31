@@ -19,6 +19,7 @@ import { ThingsComponent } from './views/things/things.component';
 import { SearchesComponent } from './views/searches/searches.component';
 import { FooterComponent } from './views/footer/footer.component';
 import { EditionComponent } from './views/edition/edition.component';
+import { ProjetComponent } from './views/projet/projet.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EditionComponent } from './views/edition/edition.component';
     ThingsComponent,
     SearchesComponent,
     FooterComponent,
-    EditionComponent
+    EditionComponent,
+    ProjetComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,9 @@
+<div class="center">
 <mat-tab-group>
 
   <mat-tab label="Général">
     <div class="search-panel">
-      <input matInput #search type="search" placeholder="Search..." />
+      <input matInput #search type="search" (click)="doSearch(search)" placeholder="Search..." />
       <button mat-icon-button>
         <mat-icon>search</mat-icon>
       </button>
@@ -91,3 +92,4 @@
   </mat-tab>
 
 </mat-tab-group>
+</div>

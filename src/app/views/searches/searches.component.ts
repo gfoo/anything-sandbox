@@ -12,4 +12,8 @@ export class SearchesComponent implements OnInit {
   ngOnInit() {
   }
 
+  doSearch(searchElt: HTMLElement) {
+//    this.router.navigate(['/searches']);
+  }
+
 }

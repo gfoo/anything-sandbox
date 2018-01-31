@@ -1,3 +1,4 @@
+import { ProjetComponent } from './views/projet/projet.component';
 import { EditionComponent } from './views/edition/edition.component';
 import { ThingsComponent } from './views/things/things.component';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
   { path: 'things', component: ThingsComponent },
   { path: 'searches', component: SearchesComponent },
   { path: 'edition', component: EditionComponent },
+  { path: 'projects', component: ProjetComponent },
   {
     path: 'not-found',
     component: ErrorPageComponent,
