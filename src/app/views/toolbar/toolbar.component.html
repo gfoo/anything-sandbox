@@ -13,21 +13,25 @@
     <button mat-menu-item>Partenaires</button>
   </mat-menu>
 
-  <button matTooltip="Présentation" mat-button [matMenuTriggerFor]="appMenu" *ngIf="user">
+  <button matTooltip="Présentation" mat-button [matMenuTriggerFor]="appMenu" >
     Présentation
   </button>
 
-  <button matTooltip="Thing list" mat-button (click)="onThings()" *ngIf="user">
+  <button matTooltip="Thing list" mat-button (click)="onThings()" >
     Things
   </button>
 
-  <button matTooltip="Search tools" mat-button (click)="onSearches()" *ngIf="user">
-    Search
-  </button>
+  <button matTooltip="Search tools" mat-button (click)="onSearches()" >
+      Search
+    </button>
 
-  <span class="fill-remaining-space"></span>
+    <button matTooltip="Edit content" mat-button (click)="onEdit()" *ngIf="user">
+        Edition
+      </button>
 
-  <div class="search-panel" *ngIf="user">
+        <span class="fill-remaining-space"></span>
+
+  <div class="search-panel">
     <input matInput #search type="search" placeholder="Search..." />
     <button mat-icon-button (click)="doSearch(search)">
       <mat-icon>search</mat-icon>

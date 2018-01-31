@@ -1,3 +1,26 @@
-<p>
-  things works!
-</p>
+<div class="example-container mat-elevation-z8">
+
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource">
+    <ng-container matColumnDef="label">
+      <mat-header-cell *matHeaderCellDef> Label </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.label}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="rights">
+      <mat-header-cell *matHeaderCellDef> Rights </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.rights}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <mat-paginator #paginator [pageSize]="nbRows" [length]="resultsLength">
+  </mat-paginator>
+
+</div>

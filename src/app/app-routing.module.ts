@@ -1,3 +1,4 @@
+import { EditionComponent } from './views/edition/edition.component';
 import { ThingsComponent } from './views/things/things.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
   { path: 'settings', component: SettingsComponent },
   { path: 'things', component: ThingsComponent },
   { path: 'searches', component: SearchesComponent },
+  { path: 'edition', component: EditionComponent },
   {
     path: 'not-found',
     component: ErrorPageComponent,

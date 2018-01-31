@@ -11,7 +11,11 @@ import {
   MatMenuModule,
   MatDividerModule,
   MatTabsModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 @NgModule({
@@ -27,7 +31,11 @@ import {
     MatMenuModule,
     MatDividerModule,
     MatTabsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTableModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatToolbarModule,
@@ -40,7 +48,11 @@ import {
     MatMenuModule,
     MatDividerModule,
     MatTabsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTableModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
   declarations: []
 })

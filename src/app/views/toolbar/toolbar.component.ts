@@ -37,6 +37,10 @@ export class ToolbarComponent implements OnInit, OnDestroy {
     this.router.navigate(['/searches']);
   }
 
+  onEdit() {
+    this.router.navigate(['/edition']);
+  }
+
   onLogout() {
     event.preventDefault();
     this.authService.logout();

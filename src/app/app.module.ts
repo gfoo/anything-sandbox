@@ -18,6 +18,7 @@ import { BackendService } from './services/backend.service';
 import { ThingsComponent } from './views/things/things.component';
 import { SearchesComponent } from './views/searches/searches.component';
 import { FooterComponent } from './views/footer/footer.component';
+import { EditionComponent } from './views/edition/edition.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FooterComponent } from './views/footer/footer.component';
     ErrorPageComponent,
     ThingsComponent,
     SearchesComponent,
-    FooterComponent
+    FooterComponent,
+    EditionComponent
   ],
   imports: [
     BrowserModule,
