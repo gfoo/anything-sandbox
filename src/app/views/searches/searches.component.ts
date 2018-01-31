@@ -32,6 +32,7 @@ export class SearchesComponent implements OnInit {
   ngOnInit() {}
 
   doSearch(searchElt: HTMLElement) {
+    this.isInit = true;
     console.log(this.value);
     this.paginator.page
       .pipe(
@@ -45,7 +46,6 @@ export class SearchesComponent implements OnInit {
               'fulltext'
             )
             .do(() => {
-              this.isInit = true;
               this.isLoadingResults = true;
             });
         }),
