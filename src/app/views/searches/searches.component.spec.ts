@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchesComponent } from './searches.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BackendService } from '../../services/backend.service';
 
 describe('SearchesComponent', () => {
   let component: SearchesComponent;
@@ -12,7 +13,15 @@ describe('SearchesComponent', () => {
     async(() => {
       TestBed.configureTestingModule({
         imports: [AppMaterialModule, BrowserAnimationsModule],
-        declarations: [SearchesComponent]
+        declarations: [SearchesComponent],
+        providers: [
+          {
+            provide: BackendService,
+            useClass: class BackendServiceMockup {
+              // add fake methods if required by tests
+            }
+          }
+        ]
       }).compileComponents();
     })
   );
