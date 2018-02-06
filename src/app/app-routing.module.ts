@@ -1,3 +1,4 @@
+import { ProjetllComponent } from "./views/projetll/projetll.component";
 import { ProjetComponent } from './views/projet/projet.component';
 import { EditionComponent } from './views/edition/edition.component';
 import { ThingsComponent } from './views/things/things.component';
@@ -12,6 +13,7 @@ import { SearchesComponent } from './views/searches/searches.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'projetll', component: ProjetllComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'things', component: ThingsComponent },

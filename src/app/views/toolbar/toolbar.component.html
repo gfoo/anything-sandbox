@@ -7,8 +7,8 @@
   </a>
 
   <mat-menu #appMenu="matMenu" yPosition="below">
-    <button mat-menu-item>Projets</button>
-    <button mat-menu-item>Activités</button>
+    <button mat-menu-item (click)="onProjLL()">Projets Lumières.Lausanne</button>
+    <button mat-menu-item>Nos activités</button>
     <button mat-menu-item>Qui sommes-nous ?</button>
     <button mat-menu-item>Partenaires</button>
   </mat-menu>
@@ -17,7 +17,7 @@
     Présentation
   </button>
 
-  <button matTooltip="Thing list" mat-button (click)="onThings()">
+  <button matTooltip="Things" mat-button (click)="onThings()">
     Things
   </button>
 
@@ -25,11 +25,28 @@
     Projects
   </button>
 
-  <button matTooltip="Search tools" mat-button (click)="onSearches()">
-    Search
+  <mat-menu #pubMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Trouvailles</button>
+    <button mat-menu-item>Dernières transcriptions</button>
+    <button mat-menu-item>Actes de colloque</button>
+    <button mat-menu-item>Etudes Lumières.Lausanne</button>
+    <button mat-menu-item>Travaux de séminaires/mémoires</button>
+    <button mat-menu-item>Vidéos</button>
+  </mat-menu>
+
+  <button matTooltip="Publications" mat-button [matMenuTriggerFor]="pubMenu">
+    Publications
   </button>
 
-  <button matTooltip="Edit content" mat-button (click)="onEdit()" *ngIf="user">
+  <button matTooltip="Actualités" mat-button>
+    Actualités
+  </button>
+
+  <button matTooltip="Recherche" mat-button (click)="onSearches()">
+    Recherche
+  </button>
+
+  <button matTooltip="Edition" mat-button (click)="onEdit()" *ngIf="user">
     Edition
   </button>
 

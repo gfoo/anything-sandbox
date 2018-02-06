@@ -20,6 +20,7 @@ import { SearchesComponent } from './views/searches/searches.component';
 import { FooterComponent } from './views/footer/footer.component';
 import { EditionComponent } from './views/edition/edition.component';
 import { ProjetComponent } from './views/projet/projet.component';
+import { ProjetllComponent } from './views/projetll/projetll.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ProjetComponent } from './views/projet/projet.component';
     SearchesComponent,
     FooterComponent,
     EditionComponent,
-    ProjetComponent
+    ProjetComponent,
+    ProjetllComponent
   ],
   imports: [
     BrowserModule,

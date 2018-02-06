@@ -29,6 +29,9 @@ export class ToolbarComponent implements OnInit, OnDestroy {
     }
   }
 
+  onProjLL() {
+    this.router.navigate(['/projetll']);
+  }
   onThings() {
     this.router.navigate(['/things']);
   }
