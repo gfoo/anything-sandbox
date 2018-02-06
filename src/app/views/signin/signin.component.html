@@ -2,9 +2,11 @@
   <mat-card>
     <mat-card-content>
       <h2>
-        <span>Sign in to Anything</span>
+        <span>Connexion locale</span>
       </h2>
-      <form class="signin-container" #form="ngForm" (ngSubmit)="authenticate()">
+      <p> Pour les utilisateurs non-AAI qui ont reçu un compte local pour Lumières.Lausanne
+      </p>
+    <form class="signin-container" #form="ngForm" (ngSubmit)="authenticate()">
         <mat-form-field>
           <!-- <mat-icon matPrefix>person</mat-icon> -->
           <input matInput placeholder="Email" required autofocus name="email" [(ngModel)]="credentials.email">
@@ -15,7 +17,8 @@
         </mat-form-field>
         <button mat-raised-button type="submit" [disabled]="form.invalid">Sign in
         </button>
-        <p>TODO: Forgotten password?</p>
+        <br>
+        <a href="/accounts/reset_password/">Mot de passe oublié ?</a>
       </form>
     </mat-card-content>
   </mat-card>

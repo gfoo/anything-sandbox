@@ -6,9 +6,14 @@
 
 .toolbar-logo {
   display: inline-block;
-  height: 75%;
-  width: 75%;
+  height: 50%;
+  width: 50%;
 }
+
+.mat-toolbar {
+  height: 45px;
+}
+
 
 .search-panel {
   background-color: whitesmoke;
@@ -17,9 +22,13 @@
   border-width: 1px;
   border-color: whitesmoke;
   display: inline-flex;
-  height: 35px;
+  height: 25px;
   position: relative;
   z-index: 10;
+}
+
+.search-panel .mat-icon-button {
+  top: -7px;
 }
 
 .search-panel input {
@@ -29,5 +38,5 @@
   border-width: 1px;
   border-color: whitesmoke;
   font-size: 12pt;
-  height: 37px;
+  height: 27px;
 }

@@ -36,7 +36,7 @@
   <span class="fill-remaining-space"></span>
 
   <div class="search-panel">
-    <input matInput #search type="search" placeholder="Search..." />
+    <input matInput #search type="search" placeholder="Recherche..." />
     <button mat-icon-button (click)="doSearch(search)">
       <mat-icon>search</mat-icon>
     </button>
@@ -48,13 +48,14 @@
 
 
   <span *ngIf="user">
-    <small>{{ user?.email }}</small>
+    <!-- <small>{{ user?.email }}</small> -->
+    <p style="font-size: small;">G. Faucherand</p>
   </span>
-  <button matTooltip="Settings" mat-icon-button routerLink="/settings" *ngIf="user">
+  <button matTooltip="Paramètres" mat-icon-button routerLink="/settings" *ngIf="user">
     <mat-icon>settings</mat-icon>
   </button>
-  <button matTooltip="Logout" mat-icon-button (click)="onLogout()" *ngIf="user">
+  <button matTooltip="Déconnexion" mat-icon-button (click)="onLogout()" *ngIf="user">
     <mat-icon>power_settings_new</mat-icon>
   </button>
-  <a *ngIf="!user" matTooltip="Sign in" mat-raised-button routerLink="/signin">Sign in</a>
+  <a *ngIf="!user" matTooltip="Se connecter" mat-raised-button routerLink="/signin">Se connecter</a>
 </mat-toolbar>
