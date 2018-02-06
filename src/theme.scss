@@ -80,18 +80,45 @@ $custom-typography: mat-typography-config(
 body {
   background-image: url('/assets/images/bg-main.gif');
   margin: 0px;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
 }
 
-h1 {
-  font-family: 'Lane Narrow, sans-serif'
-}
+// h1 {
+//   font-family: 'Lane Narrow, sans-serif'
+// }
 
 .mat-toolbar {
   background-image:
     url('/assets/images/pattern.png'),
-    linear-gradient(to bottom, #9f9276, #473c25);
+    linear-gradient(to bottom,#534B3A, #473c25);
   position: sticky;
-  position: -webkit-sticky; /* For macOS/iOS Safari */
   top: 0; /* Sets the sticky toolbar to be on top */
   z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+a {
+	color: #f0750b;
+	padding: 1px 2px;
+	border-radius: 2px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Lane Narrow', Arial, sans-serif;
+  /* padding: 15px 0 15px 0; */
+  font-size: 30px;
+  color: #f0750b;
+  font-weight: normal;
+  text-shadow: 0 1px 0 white;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Lane Narrow', Arial, sans-serif;
+  /* padding: 15px 0 15px 0; */
+  font-size: 20px;
+  color: #f0750b;
+  font-weight: normal;
+  text-shadow: 0 1px 0 white;
 }

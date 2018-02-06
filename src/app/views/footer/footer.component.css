@@ -3,23 +3,33 @@
 
   color: #c4c5b4;
 
-  background-color: transparentize(#57570c, .8);
-  box-shadow: 0 1px 2px transparentize(#57570c, .8) inset;
-
+  background-color: transparentize(#57570c, 0.8);
+  box-shadow: 0 1px 2px transparentize(#57570c, 0.8) inset;
+  background: transparent url(/assets/images/innovagency/bg-footer-upper.gif)
+    scroll repeat-x left top;
+  width: 100%;
+  height: 80px;
 }
 
 .bar {
-  background-image:
-    url('/assets/images/pattern.png'),
+  background-image: url('/assets/images/pattern.png'),
     linear-gradient(to bottom, #9f9276, #473c25);
-  border-bottom: 1px solid #2F291F;
-  box-shadow: 0 1px 2px transparentize(#57570c, .6);
+  border-bottom: 1px solid #2f291f;
+  box-shadow: 0 1px 2px transparentize(#57570c, 0.6);
 }
 
 .copyright-bar {
-
   color: #cfd0c2;
   text-shadow: 0 1px 0 #2e2f1e;
   text-transform: uppercase;
+}
 
+.ia-copyright {
+  color: #c4c5b4;
+  /* float: left; */
+  padding-left: 80px;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 37px;
+  text-shadow: 0 1px 0 #2e2f1e;
 }
