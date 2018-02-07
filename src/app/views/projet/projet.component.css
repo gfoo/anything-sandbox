@@ -3,3 +3,36 @@
   width: 80%;
   padding: 10px;
 }
+
+.dialog-img {
+  display: inline;
+  max-width: 40%;
+  max-height: 40%;
+  float: left;
+  margin: 0px 15px 15px 0px;
+}
+
+.mat-card {
+  width: 300px;
+  height: 270px;
+  margin: 25px;
+  /* background-image: url('/assets/images/bg-main.gif'); */
+
+}
+
+.mat-card h3 {
+  margin: 0;
+}
+
+h3 {
+  text-align: left;
+}
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}

@@ -19,8 +19,10 @@ import { ThingsComponent } from './views/things/things.component';
 import { SearchesComponent } from './views/searches/searches.component';
 import { FooterComponent } from './views/footer/footer.component';
 import { EditionComponent } from './views/edition/edition.component';
-import { ProjetComponent } from './views/projet/projet.component';
+import { ProjetComponent, DialogOverviewExampleDialog } from './views/projet/projet.component';
 import { ProjetllComponent } from './views/projetll/projetll.component';
+import { ActusComponent } from './views/actus/actus.component';
+import { Actus2Component } from './views/actus2/actus2.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,13 @@ import { ProjetllComponent } from './views/projetll/projetll.component';
     FooterComponent,
     EditionComponent,
     ProjetComponent,
-    ProjetllComponent
+    ProjetllComponent,
+    DialogOverviewExampleDialog,
+    ActusComponent,
+    Actus2Component
+  ],
+  entryComponents: [
+    DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule,

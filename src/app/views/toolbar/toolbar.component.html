@@ -3,8 +3,11 @@
     <mat-icon>home</mat-icon>
   </button> -->
   <a routerLink="/">
-    <img src="/assets/images/logo.png" class="toolbar-logo" alt="Lumières.Lausanne">
+    <img src="/assets/images/logo.png" class="toolbar-logo" alt="Accueil Lumières.Lausanne">
   </a>
+  <button matTooltip="Accueil Lumières.Lausanne" mat-icon-button routerLink="/">
+    <mat-icon>home</mat-icon>
+  </button>
 
   <mat-menu #appMenu="matMenu" yPosition="below">
     <button mat-menu-item (click)="onProjLL()">Projets Lumières.Lausanne</button>
@@ -17,12 +20,12 @@
     Présentation
   </button>
 
-  <button matTooltip="Things" mat-button (click)="onThings()">
+  <!-- <button matTooltip="Things" mat-button (click)="onThings()">
     Things
-  </button>
+  </button> -->
 
-  <button matTooltip="Liste de sprojets" mat-button (click)="onProjects()">
-    Projects
+  <button matTooltip="Liste des projets" mat-button (click)="onProjects()">
+    Projets
   </button>
 
   <mat-menu #pubMenu="matMenu" yPosition="below">
@@ -38,11 +41,11 @@
     Publications
   </button>
 
-  <button matTooltip="Actualités" mat-button>
+  <button matTooltip="Actualités" mat-button (click)="onActus()">
     Actualités
   </button>
 
-  <button matTooltip="Recherche" mat-button (click)="onSearches()">
+  <button matTooltip="Recherche générale ou avancée" mat-button (click)="onSearches()">
     Recherche
   </button>
 
@@ -52,14 +55,14 @@
 
   <span class="fill-remaining-space"></span>
 
-  <div class="search-panel">
+  <!-- <div class="search-panel">
     <input matInput #search type="search" placeholder="Recherche..." />
     <button mat-icon-button (click)="doSearch(search)">
       <mat-icon>search</mat-icon>
     </button>
   </div>
 
-  <mat-divider [inset]="true" [vertical]="true"></mat-divider>
+  <mat-divider [inset]="true" [vertical]="true"></mat-divider> -->
 
   <!-- This fills the remaining space of the current row -->
 

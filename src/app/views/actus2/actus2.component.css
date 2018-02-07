@@ -1,0 +1,38 @@
+.center {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+.freecontent p,
+p.ia {
+  margin: 5px 200px 5px 200px;
+  /* padding: 0 0 10px 0; */
+  text-align: justify;
+  line-height: 22px;
+  color: #2e2f1e;
+}
+
+ul {
+  list-style: none;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+li {
+  padding: 5px 10px;
+}
+.ia-date {
+  font-size: 10px;
+  font-style: italic;
+  color: #89826d;
+  margin-left: 3px;
+}
+
+.dialog-img {
+  display: inline;
+  /* max-width: 40%;
+  max-height: 40%; */
+  float: left;
+  margin: 0px 15px 15px 200px;
+}

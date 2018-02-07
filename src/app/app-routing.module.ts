@@ -1,4 +1,5 @@
-import { ProjetllComponent } from "./views/projetll/projetll.component";
+import { Actus2Component } from "./views/actus2/actus2.component";
+import { ProjetllComponent } from './views/projetll/projetll.component';
 import { ProjetComponent } from './views/projet/projet.component';
 import { EditionComponent } from './views/edition/edition.component';
 import { ThingsComponent } from './views/things/things.component';
@@ -10,6 +11,7 @@ import { HomeComponent } from './views/home/home.component';
 import { SettingsComponent } from './views/settings/settings.component';
 import { ErrorPageComponent } from './views/error-page/error-page.component';
 import { SearchesComponent } from './views/searches/searches.component';
+import { ActusComponent } from './views/actus/actus.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +22,8 @@ const appRoutes: Routes = [
   { path: 'searches', component: SearchesComponent },
   { path: 'edition', component: EditionComponent },
   { path: 'projects', component: ProjetComponent },
+  { path: 'actus', component: ActusComponent },
+  { path: 'actus2', component: Actus2Component },
   {
     path: 'not-found',
     component: ErrorPageComponent,
