@@ -24,7 +24,6 @@
   color: #c4c5b4;
   /* float: left; */
   padding-left: 80px;
-  text-transform: uppercase;
   line-height: 37px;
   text-shadow: 0 1px 0 #2e2f1e;
 }
@@ -45,7 +44,8 @@
   line-height: 35px;
   padding: 0 20px;
   display: block;
-  background: transparent url(/assets/images/innovagency/bg-item-over.png) scroll repeat-x left 35px;
+  background: transparent url(/assets/images/innovagency/bg-item-over.png)
+    scroll repeat-x left 35px;
   transition: background-position 0.5s ease-out;
 }
 
@@ -82,7 +82,46 @@
 }
 
 .mat-raised-button {
-  background-color : #DFDFDF;
+  background-color: #dfdfdf;
   height: 70%;
   vertical-align: center;
+}
+
+
+/* .mat-menu-content {
+     border-radius: 0 0 5px 5px;
+     box-shadow: 0 1px 3px #2e2f1e;
+     z-index: 1000;
+     text-shadow: 0 1px 0 #2e2f1e;
+     text-transform: uppercase;
+     color: white;
+     font-size: 11px;
+} */
+
+.mat-menu-item {
+  text-shadow: 0 1px 0 #2e2f1e;
+  text-transform: uppercase;
+  color: white;
+  font-size: 11px;
+}
+.mat-menu-ripple {
+  text-shadow: 0 1px 0 #2e2f1e;
+  text-transform: uppercase;
+  color: white;
+  font-size: 11px;
+}
+
+.mat-ripple {
+  text-shadow: 0 1px 0 #2e2f1e;
+  text-transform: uppercase;
+  color: white;
+  font-size: 11px;
+}
+
+.ia-arrow {
+  background: transparent url(/assets/images/innovagency/arrow-menu.gif) scroll
+    no-repeat right center;
+  display: block;
+  padding-right: 12px;
+  cursor: pointer;
 }

@@ -54,8 +54,6 @@ $theme: mat-light-theme($primary, $accent, $warn);
 // Include all theme styles for the components.
 @include angular-material-theme($theme);
 
-
-
 @font-face {
   font-family: 'Lane Narrow';
   src: url('/assets/fonts/lane.eot');
@@ -72,18 +70,12 @@ $custom-typography: mat-typography-config($font-family: 'Arial, sans-serif');
 //@include mat-base-typography($custom-typography);
 @include angular-material-typography($custom-typography);
 
-
-
 body {
   background-image: url('/assets/images/bg-main.gif');
   margin: 0px;
   font-family: Arial, sans-serif;
   font-size: 10pt;
 }
-
-// h1 {
-//   font-family: 'Lane Narrow, sans-serif'
-// }
 
 .mat-toolbar {
   background-image: url('/assets/images/pattern.png'),
@@ -129,11 +121,28 @@ h2 {
   font-weight: normal;
   text-shadow: 0 1px 0 white;
 }
-// footer {
-//   //  position: fixed;
-//   position: sticky;
-//   bottom: 0;
-//   left: 0;
-//   width: 100%;
-//   z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+
+
+// .mat-menu-content {
+//   background: transparent url(/assets/images/innovagency/bg-submenu.png) scroll
+//     repeat left top;
+//   border-radius: 0 0 5px 5px;
+//   box-shadow: 0 1px 3px #2e2f1e;
+//   z-index: 1000;
+//   text-shadow: 0 1px 0 #2e2f1e;
+//   text-transform: uppercase;
+//   color: white;
+//   font-size: 11px;
 // }
+
+.mat-menu-panel {
+  background: transparent url(/assets/images/innovagency/bg-submenu.png) scroll
+    repeat left top;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 1px 3px #2e2f1e;
+  z-index: 1000;
+  text-shadow: 0 1px 0 #2e2f1e;
+  text-transform: uppercase;
+  color: white;
+  font-size: 11px;
+}

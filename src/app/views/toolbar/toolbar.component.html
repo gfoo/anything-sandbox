@@ -5,18 +5,18 @@
   <a routerLink="/">
     <img src="/assets/images/logo.png" class="toolbar-logo" alt="Accueil Lumières.Lausanne">
   </a>
-  <!-- <button matTooltip="Accueil Lumières.Lausanne" mat-icon-button routerLink="/">
+  <button matTooltip="Accueil Lumières.Lausanne" mat-icon-button routerLink="/">
     <mat-icon>home</mat-icon>
-  </button> -->
+  </button>
 
-  <mat-menu #appMenu="matMenu" yPosition="below">
+  <mat-menu #appMenu="matMenu" [overlapTrigger]="false">
     <button mat-menu-item (click)="onProjLL()">Projets Lumières.Lausanne</button>
     <button mat-menu-item>Nos activités</button>
     <button mat-menu-item>Qui sommes-nous ?</button>
     <button mat-menu-item>Partenaires</button>
   </mat-menu>
 
-  <button class="mat-button-ll" matTooltip="Présentation" mat-button [matMenuTriggerFor]="appMenu">
+  <button class="mat-button-ll ia-arrow" matTooltip="Présentation" mat-button [matMenuTriggerFor]="appMenu">
     Présentation
   </button>
 
@@ -28,7 +28,7 @@
     Projets
   </button>
 
-  <mat-menu #pubMenu="matMenu" yPosition="below">
+  <mat-menu #pubMenu="matMenu"  [overlapTrigger]="false">
     <button mat-menu-item>Trouvailles</button>
     <button mat-menu-item>Dernières transcriptions</button>
     <button mat-menu-item>Actes de colloque</button>
@@ -37,7 +37,7 @@
     <button mat-menu-item>Vidéos</button>
   </mat-menu>
 
-  <button class="mat-button-ll" matTooltip="Publications" mat-button [matMenuTriggerFor]="pubMenu">
+  <button class="mat-button-ll  ia-arrow" matTooltip="Publications" mat-button [matMenuTriggerFor]="pubMenu">
     Publications
   </button>
 
