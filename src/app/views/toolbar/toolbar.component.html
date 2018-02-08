@@ -16,7 +16,7 @@
     <button mat-menu-item>Partenaires</button>
   </mat-menu>
 
-  <button matTooltip="Présentation" mat-button [matMenuTriggerFor]="appMenu">
+  <button class="mat-button-ll" matTooltip="Présentation" mat-button [matMenuTriggerFor]="appMenu">
     Présentation
   </button>
 
@@ -24,7 +24,7 @@
     Things
   </button> -->
 
-  <button matTooltip="Liste des projets" mat-button (click)="onProjects()">
+  <button class="mat-button-ll" matTooltip="Liste des projets" mat-button (click)="onProjects()">
     Projets
   </button>
 
@@ -37,20 +37,20 @@
     <button mat-menu-item>Vidéos</button>
   </mat-menu>
 
-  <button matTooltip="Publications" mat-button [matMenuTriggerFor]="pubMenu">
+  <button class="mat-button-ll" matTooltip="Publications" mat-button [matMenuTriggerFor]="pubMenu">
     Publications
   </button>
 
-  <button matTooltip="Actualités" mat-button (click)="onActus()">
+  <button class="mat-button-ll"  matTooltip="Actualités" mat-button (click)="onActus()">
     Actualités
   </button>
 
-  <button matTooltip="Recherche générale ou avancée" mat-button (click)="onSearches()">
+  <button class="mat-button-ll"  matTooltip="Recherche générale ou avancée" mat-button (click)="onSearches()">
     Recherche
   </button>
 
-  <button matTooltip="Edition" mat-button (click)="onEdit()" *ngIf="user">
-    Edition
+  <button class="mat-button-ll"  matTooltip="Espace de travail" mat-button (click)="onEdit()" *ngIf="user">
+      Espace de travail
   </button>
 
   <span class="fill-remaining-space"></span>
@@ -77,5 +77,5 @@
   <button matTooltip="Déconnexion" mat-icon-button (click)="onLogout()" *ngIf="user">
     <mat-icon>power_settings_new</mat-icon>
   </button>
-  <a *ngIf="!user" matTooltip="Se connecter" mat-raised-button routerLink="/signin">Se connecter</a>
+  <a *ngIf="!user" class="mat-button-ll" matTooltip="Se connecter" mat-button routerLink="/signin">Se connecter</a>
 </mat-toolbar>

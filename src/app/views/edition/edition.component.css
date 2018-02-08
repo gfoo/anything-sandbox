@@ -1,0 +1,14 @@
+.ia-content-inner .main .content {
+  background: transparent url(/assets/images/innovagency/bg-box.png) scroll repeat left top;
+}
+
+.main .content h2, .main .content h3, .main .content h4 {
+  margin-bottom: 15px;
+}
+
+.content .field_group {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  margin: 0 0 7px !important;
+}

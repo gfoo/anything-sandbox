@@ -11,9 +11,42 @@
 }
 
 .mat-toolbar {
-  height: 45px;
+  height: 50px;
+
+  background-image: url('/assets/images/pattern.png'),
+    linear-gradient(to bottom, #9f9276, #473c25);
+  border-bottom: 1px solid #2f291f;
+  box-shadow: 0 1px 2px transparentize(#57570c, 0.6);
+
+  text-shadow: 0 1px 0 #2e2f1e;
+  text-transform: uppercase;
+  color: #c4c5b4;
+  /* float: left; */
+  padding-left: 80px;
+  text-transform: uppercase;
+  line-height: 37px;
+  text-shadow: 0 1px 0 #2e2f1e;
 }
 
+.mat-button-ll {
+  font-size: 11px;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 #2e2f1e;
+  line-height: 35px;
+}
+
+.ia-menu-inner li.ia a.ia {
+  font-size: 11px;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 #2e2f1e;
+  line-height: 35px;
+  padding: 0 20px;
+  display: block;
+  background: transparent url(/assets/images/innovagency/bg-item-over.png) scroll repeat-x left 35px;
+  transition: background-position 0.5s ease-out;
+}
 
 .search-panel {
   background-color: whitesmoke;

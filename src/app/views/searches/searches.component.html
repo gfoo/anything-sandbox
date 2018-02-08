@@ -7,14 +7,16 @@
         <button (click)="doSearch()" mat-icon-button>
           <mat-icon>search</mat-icon>
         </button>
-      </div>
-      <br>
-      <mat-checkbox>Fiches bibliographiques</mat-checkbox>
-      <mat-checkbox>Fiches de transcription</mat-checkbox>
-      <mat-checkbox>Personnes</mat-checkbox>
-      <br>
+        </div>
+        <br>
+        <mat-checkbox>Fiches bibliographiques</mat-checkbox>
+        <mat-checkbox>Fiches de transcription</mat-checkbox>
+        <mat-checkbox>Personnes</mat-checkbox>
+        <br>
+        <br>
+        <br>
 
-      <div class="example-loading-shade" *ngIf="isInit && isLoadingResults">
+      <!-- <div class="example-loading-shade" *ngIf="isInit && isLoadingResults">
         <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
       </div>
       <mat-table #table [dataSource]="dataSource">
@@ -34,71 +36,2383 @@
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
       <mat-paginator #paginator [pageSize]="nbRows" [length]="resultsLength">
-      </mat-paginator>
+      </mat-paginator> -->
 
-    </mat-tab>
+      <div class="global-results container_24" id="global-results">
+          <div class="global-search-results grid_24" id="global-search-results">
 
-    <mat-tab label="Bibliographie">
-      <h3>Result 1:</h3>
-      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
-        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
-        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
-        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
-        dolor ad irure fugiat minim id.</p>
-      <h3>Result 1:</h3>
-      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
-        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
-        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
-        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
-        dolor ad irure fugiat minim id.</p>
-    </mat-tab>
 
-    <mat-tab label="Personnes">
-      <h3>Result 1:</h3>
-      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
-        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
-        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
-        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
-        dolor ad irure fugiat minim id.</p>
-      <h3>Result 1:</h3>
-      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
-        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
-        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
-        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
-        dolor ad irure fugiat minim id.</p>
-    </mat-tab>
 
-    <mat-tab label="Biographie">
-      <h3>Result 1:</h3>
-      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
-        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
-        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
-        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
-        dolor ad irure fugiat minim id.</p>
-      <h3>Result 1:</h3>
-      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
-        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
-        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
-        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
-        dolor ad irure fugiat minim id.</p>
-      <h3>Result 1:</h3>
-      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
-        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
-        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
-        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
-        dolor ad irure fugiat minim id.</p>
-      <h3>Result 1:</h3>
-      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
-        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
-        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
-        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
-        dolor ad irure fugiat minim id.</p>
-      <h3>Result 1:</h3>
-      <p>Nulla esse cupidatat ipsum aliquip pariatur eu consectetur. Sunt aute pariatur Lorem laborum tempor sunt incididunt
-        ea Lorem. Tempor laboris veniam excepteur ut eiusmod minim elit consectetur esse veniam tempor labore exercitation.
-        Nisi pariatur sunt nulla irure minim quis aliqua deserunt anim id ullamco consectetur. Sunt sit in do reprehenderit
-        dolor veniam ad dolor. Nulla mollit mollit minim laborum officia amet. Anim laborum ad laborum esse magna excepteur
-        dolor ad irure fugiat minim id.</p>
+
+                <div class="results-header">
+
+              <div class="grid_4 alpha">&nbsp;19 fiches trouvées</div>
+
+              <div class="grid_12"><div class="results-paging global-results-paging grid_16 omega"></div></div>
+              <div class="clear"></div>
+            </div>
+
+
+
+            <div class="global-results-body">
+                <ul class="results-group-list">
+
+                  <li>
+
+
+
+                    <span class="results-model grouper_1">Personne</span>
+                  <ul class="results-item-list">
+
+                      <li>
+
+                        <a id="Person__617" class="external collectable" href="/fiches/bio/617/?q=Bodmer" target="search_result" title="Afficher la biographie dans une nouvelle fenêtre">Altmann, Johann Georg (1695 - 1758)</a>
+
+
+                              </li>
+
+                      <li>
+
+                        <a id="Person__241" class="external collectable" href="/fiches/bio/241/?q=Bodmer" target="search_result" title="Afficher la biographie dans une nouvelle fenêtre">Bodmer, Johann Jakob (1698 - 1783)</a>
+
+
+                              </li>
+
+                      <li>
+
+                        <a id="Person__427" class="external collectable" href="/fiches/bio/427/?q=Bodmer" target="search_result" title="Afficher la biographie dans une nouvelle fenêtre">Breitinger, Johann Jakob (1701 - 1776)</a>
+
+
+                              </li>
+
+                      <li>
+
+                        <a id="Person__28" class="external collectable" href="/fiches/bio/28/?q=Bodmer" target="search_result" title="Afficher la biographie dans une nouvelle fenêtre">Bridel, Philippe-Sirice (1757 - 1845)</a>
+
+
+                              </li>
+
+                      <li>
+
+                        <a id="Person__2484" class="external collectable" href="/fiches/bio/2484/?q=Bodmer" target="search_result" title="Afficher la biographie dans une nouvelle fenêtre">Lauffer, Johann Jakob (1688 - 1734)</a>
+
+
+                              </li>
+
+                      <li>
+
+                        <a id="Person__68" class="external collectable" href="/fiches/bio/68/?q=Bodmer" target="search_result" title="Afficher la biographie dans une nouvelle fenêtre">Muralt, Beat Ludwig von (v. 1665 - 1749)</a>
+
+
+                              </li>
+
+                  </ul>
+
+
+
+
+
+                    </li>
+
+                  <li>
+
+                        <span class="results-model grouper_1">Fiche bibliographique</span>
+
+                        <ul class="results-subgroup-list results-biblio-doctype">
+
+                      <li class="doctype doctype_1">
+                        <span class="grouper grouper_2">Livre</span>
+                      <ul class="results-item-list">
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_1">
+          <span class="contributor contrib-authors"><span>Bender, Wolfgang</span></span><span class="title">, <a id="Biblio__8233" class="title collectable ia-link" href="/fiches/biblio/8233/?q=Bodmer" target="search_result">Johann Jakob Bodmer und Johann Jakob Breitinger</a></span><span class="place">, Stuttgart</span><span class="publisher"> : J.B. Metzlersche Verlagsbuchhandlung</span><span class="date">, 1973</span><span class="pages">, 119 p.</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_1">
+          <span class="contributor contrib-authors"><span>Bondeli, Julie</span></span><span class="title">, <a id="Biblio__8567" class="title collectable ia-link" href="/fiches/biblio/8567/?q=Bodmer" target="search_result">Briefe</a></span><span>, <span class="contributor contrib-publisher">Baum, Angelica</span><span class="contributor contrib-publisher"> et Christensen, Birgit</span>
+               (éd.)</span><span class="place">, Zürich</span><span class="publisher"> : Chronos Verlag</span><span class="date">, 2012</span><span class="volumes">, 4 vol.</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_1">
+          <span class="contributor contrib-authors"><span>Bonjour, Edgar</span><span> et Feller, Richard</span></span><span class="title">, <a id="Biblio__7678" class="title collectable ia-link" href="/fiches/biblio/7678/?q=Bodmer" target="search_result">Geschichtschreibung der Schweiz vom Spätmittelalter zur Neuzeit</a></span><span class="place">, Basel</span><span class="publisher"> : Schwabe</span><span class="date">, 1962</span><span class="volumes">, 2 vol.</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_1">
+          <span class="contributor contrib-authors"><span>Mörikofer, J.C.</span></span><span class="title">, <a id="Biblio__223" class="title collectable ia-link" href="/fiches/biblio/223/?q=Bodmer" target="search_result">Die Schweizerische Literatur des achtzehnten Jahrhunderts</a></span><span class="place">, Leipzig</span><span class="publisher"> : S. Hirzel</span><span class="date">, 1861</span><span class="pages">, 537 p.</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_1">
+          <span class="contributor contrib-authors"><span>Reynold, Gonzague de</span></span><span class="title">, <a id="Biblio__5593" class="title collectable ia-link" href="/fiches/biblio/5593/?q=Bodmer" target="search_result">Histoire littéraire de la Suisse au XVIIIe siècle: Bodmer et l'école suisse</a></span><span class="place">, Lausanne</span><span class="publisher"> : Georges Bridel</span><span class="date">, 1912</span><span class="pages">, 902 p.</span><span class="volumes">, 2/2 vol.</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_1">
+          <span class="contributor contrib-authors"><span>Santschi, Catherine</span><span> et Roth, Charles</span></span><span class="title">, <a id="Biblio__5828" class="title collectable ia-link" href="/fiches/biblio/5828/?q=Bodmer" target="search_result">Catalogue des manuscrits d'Abraham Ruchat</a></span><span class="place">, Lausanne</span><span class="publisher"> : Payot</span><span>, coll. Etudes et documents pour servir à l'histoire de l'Université de Lausanne 8</span><span class="date">, 1971</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_1">
+          <span class="contributor contrib-authors"><span>Stoye, Enid</span></span><span class="title">, <a id="Biblio__328" class="title collectable ia-link" href="/fiches/biblio/328/?q=Bodmer" target="search_result">Vincent Bernard Tscharner (1728-1778). A Study of Swiss Culture in the Eigtheenth Century</a></span><span class="place">, Fribourg</span><span class="publisher"> : Imprimerie St-Paul</span><span class="date">, 1954</span><span class="pages">, 262 p.</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_1">
+          <span class="contributor contrib-authors"></span><span class="contributor contrib-director">Lütteken, Anett</span><span class="contributor contrib-director"> et Mahlmann-Bauer, Barbara</span>
+               (dir.)<span class="title">, <a id="Biblio__8232" class="title collectable ia-link" href="/fiches/biblio/8232/?q=Bodmer" target="search_result" title="Bodmer und Breitinger im Netzwerk der europäischen Aufklärung. Zürcher Tagung vom 27. bis 30. September 2006">Bodmer und Breitinger im Netzwerk der europäischen Aufklärung</a></span><span class="place">, Göttingen</span><span class="publisher"> : Wallstein</span><span class="date">, 2009</span><span class="pages">, 879 p.</span>
+          </div>
+
+        </li>
+
+
+                      </ul>
+                    </li>
+
+                      <li class="doctype doctype_2">
+                        <span class="grouper grouper_2">Chapitre de livre</span>
+                      <ul class="results-item-list">
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_2">
+          <span class="contributor contrib-authors"><span>Lütteken, Anett</span></span><span class="title">, «&nbsp;<a id="Biblio__8733" class="title collectable ia-link" href="/fiches/biblio/8733/?q=Bodmer" target="search_result">Johann Jakob Bodmer, sein Freundeskreis und die französichsprachige Kultur</a>&nbsp;»</span><span>, in
+              <span><span class="contributor contrib-director">Battistini, Sandrine <em>et alii</em> (dir.)</span>, </span><span class="book-title">Les écrivains suisses alémaniques et la culture francophone au XVIIIe siècle</span></span><span class="place">, Genève</span><span class="publisher"> : Slatkine</span><span class="date">, 2008</span><span class="pages">, p. 273-286</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_2">
+          <span class="contributor contrib-authors"><span>Mahlmann-Bauer, Barbara</span></span><span class="title">, «&nbsp;<a id="Biblio__8732" class="title collectable ia-link" href="/fiches/biblio/8732/?q=Bodmer" target="search_result">Johann Jakob Bodmers Rousseau-Lektüre</a>&nbsp;»</span><span>, in
+              <span><span class="contributor contrib-director">Battistini, Sandrine <em>et alii</em> (dir.)</span>, </span><span class="book-title">Les écrivains suisses alémaniques et la culture francophone au XVIIIe siècle</span></span><span class="place">, Genève</span><span class="publisher"> : Slatkine</span><span class="date">, 2008</span><span class="pages">, p. 209-272</span>
+          </div>
+
+        </li>
+
+
+                      </ul>
+                    </li>
+
+                      <li class="doctype doctype_3">
+                        <span class="grouper grouper_2">Article de revue</span>
+                      <ul class="results-item-list">
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_3">
+          <span class="contributor contrib-authors"><span>Anonyme</span></span><span class="title-article">, <a id="Biblio__2734" class="title-article collectable ia-link" href="/fiches/biblio/2734/?q=Bodmer" target="search_result">«&nbsp;Fragment du Poème de Dina de M. Bodmer&nbsp;»</a></span><span class="title">, Journal helvétique</span><span class="date">, mars 1763</span><span class="pages">, p. 243-259</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_3">
+          <span class="contributor contrib-authors"><span>Anonyme [Editeurs]</span></span><span class="title-article">, <a id="Biblio__4126" class="title-article collectable ia-link" href="/fiches/biblio/4126/?q=Bodmer" target="search_result">«&nbsp;Nouvelles pièces de théâtre par M. Bodmer&nbsp;»</a></span><span class="title">, Journal helvétique</span><span class="date">, septembre 1769</span><span class="pages">, p. 295-296</span>
+          </div>
+
+        </li>
+
+
+                                  <li>
+
+
+          <div class="biblioref-item doctype_3">
+          <span class="contributor contrib-authors"><span>Zellweger, Rodolphe</span></span><span class="title-article">, <a id="Biblio__823" class="title-article collectable ia-link" href="/fiches/biblio/823/?q=Bodmer" target="search_result">«&nbsp;"Ô Haller,  Ô Gessner, Ô  Bodmer !" : le "Journal helvétique" et la littérature suisse-allemande&nbsp;»</a></span><span class="title">, Musée neuchâtelois</span><span>, n° 16</span><span class="date">, 1979</span><span class="pages">, p. 123-138</span>
+          </div>
+
+        </li>
+
+
+                      </ul>
+                    </li>
+
+                  </ul>
+
+
+
+
+
+
+
+                    </li>
+
+                </ul>
+              </div>
+
+
+                <div class="results-footer">
+
+                    <div class="grid_4 alpha">&nbsp;19 fiches trouvées</div>
+
+                    <div class="grid_12"><div class="results-paging global-results-paging grid_16 omega"></div></div>
+                    <div class="clear"></div>
+                </div>
+
+
+
+          </div>
+        </div>
+
+
+
+      </mat-tab>
+
+    <mat-tab label="Avancée">
+      <mat-tab-group>
+
+        <mat-tab label="Bibliographie">
+            <div class="content">
+
+
+
+
+                <div class="ext_search container_24">
+                  <form action="" method="get" id="biblio_search">
+
+                  <div class="cmd_bar grid_24">
+                    <div class="grid_18 alpha">
+                      <span class="cmd_set">Grouper par: <select name="grp" id="id_grp">
+                <option value="d" selected="selected">Type et auteur</option>
+                <option value="a">Auteur et type</option>
+                <option value="">– sans regroupement –</option>
+                </select></span>
+                      <span class="cmd_set">Trier par: <select name="sort" id="id_sort">
+                <option value="d">Date croissante</option>
+                <option value="-d">Date décroissante</option>
+                <option value="t">Titre</option>
+                </select></span>
+                      <span class="cmd_set">Fiches par page: <select name="nbi" id="id_nbi">
+                <option value="10">10</option>
+                <option value="" selected="selected">25</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                </select></span>
+                    </div>
+                        <div class="grid_6 omega" style="text-align: center">
+                          <button type="reset" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-close"></span><span class="ui-button-text">Effacer</span></button>&nbsp;
+                          <span class="myui-important"><button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-search"></span><span class="ui-button-text"><strong>Chercher</strong></span></button></span>
+                    </div>
+                  </div>
+
+
+                  <div class="clear"></div>
+                  <div class="search-filters">
+                    <div class="cadre">
+
+
+                      <table class="fields-table fldset_row fldset_xfld"><tbody>
+                        <tr><th>Avec les mots dans les champs</th></tr>
+                        <tr><td>
+
+                          <div class="xfld_row">
+                                <div class="grid_2 alpha fld_op">&nbsp;</div>
+                                <div class="grid_5 fld_sel">
+                              <select name="x0_fld" id="id_x0_fld">
+                <option value="title" selected="selected">Titre du document</option>
+                <option value="authors">Auteur / Contributeur</option>
+                <option value="person">Personne</option>
+                <option value="edit">Editeur</option>
+                <option value="place">Lieu d'édition</option>
+                </select>
+                                </div>
+                                <div class="grid_15 omega fld_val">
+                                    <input type="text" name="x0_val" id="id_x0_val">
+                                </div>
+                                <div class="clear"></div>
+                              </div>
+
+                                <div class="xfld_row">
+                                <div class="grid_2 alpha fld_op">
+                                  <select name="x1_op" id="id_x1_op">
+                <option value="or">Ou</option>
+                <option value="and" selected="selected">Et</option>
+                <option value="not">Sauf</option>
+                </select>
+                                </div>
+                                <div class="grid_5 fld_sel">
+                                  <select name="x1_fld" id="id_x1_fld">
+                <option value="title">Titre du document</option>
+                <option value="authors" selected="selected">Auteur / Contributeur</option>
+                <option value="person">Personne</option>
+                <option value="edit">Editeur</option>
+                <option value="place">Lieu d'édition</option>
+                </select>
+                                </div>
+                                <div class="grid_15 omega fld_val">
+                                    <input type="text" name="x1_val" id="id_x1_val">
+                                </div>
+                                <div class="clear"></div>
+                              </div>
+
+                          <div class="supp-fields xfld_row hidden">
+                                <div class="grid_2 alpha fld_op">
+                              <select name="x2_op" id="id_x2_op">
+                <option value="or">Ou</option>
+                <option value="and" selected="selected">Et</option>
+                <option value="not">Sauf</option>
+                </select>
+                                </div>
+                                <div class="grid_5 fld_sel">
+                              <select name="x2_fld" id="id_x2_fld">
+                <option value="title">Titre du document</option>
+                <option value="authors">Auteur / Contributeur</option>
+                <option value="person">Personne</option>
+                <option value="edit">Editeur</option>
+                <option value="place" selected="selected">Lieu d'édition</option>
+                </select>
+                                </div>
+                                <div class="grid_15 omega fld_val">
+                                    <input type="text" name="x2_val" id="id_x2_val">
+                                </div>
+                                <div class="clear"></div>
+                          </div>
+
+                          <div class="supp-fields xfld_row hidden">
+                                <div class="grid_2 alpha fld_op">
+                              <select name="x3_op" id="id_x3_op">
+                <option value="or">Ou</option>
+                <option value="and" selected="selected">Et</option>
+                <option value="not">Sauf</option>
+                </select>
+                                </div>
+                                <div class="grid_5 fld_sel">
+                              <select name="x3_fld" id="id_x3_fld">
+                <option value="title">Titre du document</option>
+                <option value="authors">Auteur / Contributeur</option>
+                <option value="person">Personne</option>
+                <option value="edit" selected="selected">Editeur</option>
+                <option value="place">Lieu d'édition</option>
+                </select>
+                                </div>
+                                <div class="grid_15 omega fld_val">
+                                    <input type="text" name="x3_val" id="id_x3_val">
+                                </div>
+                                <div class="clear"></div>
+                          </div>
+
+                          <div class="more-field"><button type="button" title="Afficher plus de champs" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" role="button" aria-disabled="false" style="font-size: 9px;"><span class="ui-button-icon-primary ui-icon ui-icon-plusthick"></span><span class="ui-button-text">Plus de champs</span></button></div>
+
+                        </td></tr>
+                      </tbody></table>
+
+
+                      <table class="fields-table fldset_row">
+                      <colgroup><col width="40">
+                      <col width="15">
+                      <col width="15">
+                      <col width="15">
+                      <col width="15">
+                      </colgroup><tbody>
+                        <tr>
+                          <th>Type de document</th>
+                          <th>Revue</th>
+                          <th>Type de littérature</th>
+                          <th>Type de manuscrit</th>
+                          <th>Lieu de dépôt</th>
+                        </tr>
+                        <tr>
+                          <td class="fldset_doctype">
+                            <div class="float-col">
+                              <ul>
+                <li><label for="id_dt_0"><input type="checkbox" name="dt" value="1" id="id_dt_0"> Livre</label></li>
+                <li><label for="id_dt_1"><input type="checkbox" name="dt" value="2" id="id_dt_1"> Chapitre de livre</label></li>
+                <li><label for="id_dt_2"><input type="checkbox" name="dt" value="3" id="id_dt_2"> Article de revue</label></li>
+                <li><label for="id_dt_3"><input type="checkbox" name="dt" value="4" id="id_dt_3"> Article de dictionnaire</label></li>
+                <li><label for="id_dt_4"><input type="checkbox" name="dt" value="5" id="id_dt_4"> Manuscrit</label></li>
+                </ul>
+                              <ul>
+                                <li><label for="id_dt_4bis" title="Uniquement les manuscrits avec transcription"><input type="checkbox" id="id_dt_4bis" value="1" name="dtT">Transcription seul.</label></li>
+                              </ul>
+                            </div>
+                          </td>
+
+                          <td class="fldset_journal">
+                            <div class="float-col">
+                            <select name="journal" id="id_journal">
+                <option value="" selected="selected">---------</option>
+                <option value=" La nouvelle semaine artistique et littéraire"> La nouvelle semaine artistique et littéraire</option>
+                <option value=" The International Journal of Psychoanalysis"> The International Journal of Psychoanalysis</option>
+                <option value="Acta Histriae">Acta Histriae</option>
+                <option value="Actes de la Société Jurassienne d'Emulation">Actes de la Société Jurassienne d'Emulation</option>
+                <option value="Allgemeine schweizerische Militärzeitschrift">Allgemeine schweizerische Militärzeitschrift</option>
+                <option value="Alpine Journal">Alpine Journal</option>
+                <option value="Annales Benjamin Constant">Annales Benjamin Constant</option>
+                <option value="Annales de la Société Jean-Jacques Rousseau">Annales de la Société Jean-Jacques Rousseau</option>
+                <option value="Annales fribourgeoises">Annales fribourgeoises</option>
+                <option value="Annales fribourgeoises : revue fribourgeoise d'histoire, d'art et d'archéologie">Annales fribourgeoises : revue fribourgeoise d'histoire, d'art et d'archéologie</option>
+                <option value="Annales historiques de la Révolution française">Annales historiques de la Révolution française</option>
+                <option value="Annales Pestalozzi">Annales Pestalozzi</option>
+                <option value="Annali della scuola speciale per archivisti e bibliotecari dell'Università di Roma">Annali della scuola speciale per archivisti e bibliotecari dell'Università di Roma</option>
+                <option value="Annals of Science">Annals of Science</option>
+                <option value="Anthropologischer Anzeiger">Anthropologischer Anzeiger</option>
+                <option value="Archiv des historischen Vereins des Kantons Bern">Archiv des historischen Vereins des Kantons Bern</option>
+                <option value="Archiv für Geschichte der Philosophie">Archiv für Geschichte der Philosophie</option>
+                <option value="Archives des sciences">Archives des sciences</option>
+                <option value="Archives héraldiques suisses">Archives héraldiques suisses</option>
+                <option value="Archives internationales d'histoire des sciences">Archives internationales d'histoire des sciences</option>
+                <option value="Archives suisses des traditions populaires">Archives suisses des traditions populaires</option>
+                <option value="Arquivo de bibliografia portuguesa">Arquivo de bibliografia portuguesa</option>
+                <option value="Art et Architecture en Suisse">Art et Architecture en Suisse</option>
+                <option value="Aventicum">Aventicum</option>
+                <option value="Basler Zeitschrift für Geschichte und Altertumskunde">Basler Zeitschrift für Geschichte und Altertumskunde</option>
+                <option value="Bericht der Gewerbeschule zu Basel: 1874-75">Bericht der Gewerbeschule zu Basel: 1874-75</option>
+                <option value="Bericht über die Tätigkeit der Eidgenössischen Kommission der Gottfried-Keller-Stiftung">Bericht über die Tätigkeit der Eidgenössischen Kommission der Gottfried-Keller-Stiftung</option>
+                <option value="Berner Taschenbuch">Berner Taschenbuch</option>
+                <option value="Berner Zeitschrift für Geschichte und Heimatkunde">Berner Zeitschrift für Geschichte und Heimatkunde</option>
+                <option value="Bibliothèque choisie">Bibliothèque choisie</option>
+                <option value="Bibliothèque raisonnée des ouvrages des savans de l'Europe">Bibliothèque raisonnée des ouvrages des savans de l'Europe</option>
+                <option value="Bibliothèque universelle et revue suisse">Bibliothèque universelle et revue suisse</option>
+                <option value="Biographies neuchâteloises">Biographies neuchâteloises</option>
+                <option value="Blätter für bernische Geschichte, Kunst und Altertumskunde">Blätter für bernische Geschichte, Kunst und Altertumskunde</option>
+                <option value="Blätter für lippische Heimatkunde">Blätter für lippische Heimatkunde</option>
+                <option value="Bulletin de l'association des amis du cabinet des médailles">Bulletin de l'association des amis du cabinet des médailles</option>
+                <option value="Bulletin de la Société d'anthropologie de Paris">Bulletin de la Société d'anthropologie de Paris</option>
+                <option value="Bulletin de la Société d'histoire et d'archéologie de Genève">Bulletin de la Société d'histoire et d'archéologie de Genève</option>
+                <option value="Bulletin de la Société neuchâteloise des sciences naturelles">Bulletin de la Société neuchâteloise des sciences naturelles</option>
+                <option value="Bulletin de la Société vaudoise des sciences naturelles">Bulletin de la Société vaudoise des sciences naturelles</option>
+                <option value="Bulletin du Cercle vaudois de botanique">Bulletin du Cercle vaudois de botanique</option>
+                <option value="Bulletin généalogique vaudois">Bulletin généalogique vaudois</option>
+                <option value="Bulletin mensuel de l'Académie delphinale">Bulletin mensuel de l'Académie delphinale</option>
+                <option value="Bulletin NIKE">Bulletin NIKE</option>
+                <option value="Bulletins des séances de la Société Vaudoise des Sciences Naturelles">Bulletins des séances de la Société Vaudoise des Sciences Naturelles</option>
+                <option value="Bulletins et mémoires de la Société d'Anthropologie de Paris">Bulletins et mémoires de la Société d'Anthropologie de Paris</option>
+                <option value="Cahiers de l'Association internationale des études françaises">Cahiers de l'Association internationale des études françaises</option>
+                <option value="Cahiers du monde russe">Cahiers du monde russe</option>
+                <option value="Cahiers Isabelle de Charrière">Cahiers Isabelle de Charrière</option>
+                <option value="Cahiers staëliens">Cahiers staëliens</option>
+                <option value="Cahiers Vilfredo Pareto">Cahiers Vilfredo Pareto</option>
+                <option value="Choix littéraire">Choix littéraire</option>
+                <option value="Chronozones">Chronozones</option>
+                <option value="Church History">Church History</option>
+                <option value="Clio. Histoire, femmes et sociétés">Clio. Histoire, femmes et sociétés</option>
+                <option value="Colloquium Helveticum">Colloquium Helveticum</option>
+                <option value="Comptes rendus du 2e congrès international de philosophie, Genève, 4-8 septembre 1904">Comptes rendus du 2e congrès international de philosophie, Genève, 4-8 septembre 1904</option>
+                <option value="Daedalus">Daedalus</option>
+                <option value="Daphnis. Zeitschrift für Mittlere Deutsche Literatur (1400-1750)">Daphnis. Zeitschrift für Mittlere Deutsche Literatur (1400-1750)</option>
+                <option value="De Achttiende Eeuw">De Achttiende Eeuw</option>
+                <option value="De Zeventiende Eeuw: Cultuur in de Nederlanden in Interdisciplinair Perspectief">De Zeventiende Eeuw: Cultuur in de Nederlanden in Interdisciplinair Perspectief</option>
+                <option value="Der Schweitzerischen Gesellschaft Bern Sammlungen">Der Schweitzerischen Gesellschaft Bern Sammlungen</option>
+                <option value="Dix-huitième siècle">Dix-huitième siècle</option>
+                <option value="Dix-septième siècle">Dix-septième siècle</option>
+                <option value="Documentatieblad werkgroep achttiende eeuw">Documentatieblad werkgroep achttiende eeuw</option>
+                <option value="Documents pour l'histoire du français langue étrangère ou seconde">Documents pour l'histoire du français langue étrangère ou seconde</option>
+                <option value="École pratique des hautes études, Section des sciences religieuses">École pratique des hautes études, Section des sciences religieuses</option>
+                <option value="Ecoles et vie intellectuelle à Lausanne au Moyen Age">Ecoles et vie intellectuelle à Lausanne au Moyen Age</option>
+                <option value="Eighteenth-Century Life">Eighteenth-Century Life</option>
+                <option value="Eighteenth-Century Studies">Eighteenth-Century Studies</option>
+                <option value="Ephemerides gallicae berolinenses">Ephemerides gallicae berolinenses</option>
+                <option value="Epistémologie, Langage">Epistémologie, Langage</option>
+                <option value="Equinoxe">Equinoxe</option>
+                <option value="Ethnologia Europaea">Ethnologia Europaea</option>
+                <option value="Ethnologische Zeitschrift Zürich">Ethnologische Zeitschrift Zürich</option>
+                <option value="Etrennes helvétiques">Etrennes helvétiques</option>
+                <option value="Etudes de lettres">Etudes de lettres</option>
+                <option value="Etudes Jean-Jacques Rousseau">Etudes Jean-Jacques Rousseau</option>
+                <option value="Etudes Lumières.Lausanne">Etudes Lumières.Lausanne</option>
+                <option value="Etudes suisses d'histoire générale">Etudes suisses d'histoire générale</option>
+                <option value="European Journal of Political Theory">European Journal of Political Theory</option>
+                <option value="Feuille d'avis de Lausanne">Feuille d'avis de Lausanne</option>
+                <option value="Feuille d'avis de Vevey">Feuille d'avis de Vevey</option>
+                <option value="Feuille d'Avis du District et de Payerne, le Démocrate">Feuille d'Avis du District et de Payerne, le Démocrate</option>
+                <option value="Filaretovskij al’manax">Filaretovskij al’manax</option>
+                <option value="French Historical Studies">French Historical Studies</option>
+                <option value="French Studies">French Studies</option>
+                <option value="Fundamina">Fundamina</option>
+                <option value="Gazette de Lausanne">Gazette de Lausanne</option>
+                <option value="Gazette de Lausanne et Journal suisse">Gazette de Lausanne et Journal suisse</option>
+                <option value="Gazette des beaux-arts">Gazette des beaux-arts</option>
+                <option value="Genava">Genava</option>
+                <option value="Généalogie suisse: annuaire">Généalogie suisse: annuaire</option>
+                <option value="Gesnerus">Gesnerus</option>
+                <option value="Grosse Schweizer Forscher">Grosse Schweizer Forscher</option>
+                <option value="Grotiana">Grotiana</option>
+                <option value="Heimatland Lippe">Heimatland Lippe</option>
+                <option value="Heimatland Lippe: Zeitschrift des Lippischen Heimatbundes und des Landesverbandes Lippe">Heimatland Lippe: Zeitschrift des Lippischen Heimatbundes und des Landesverbandes Lippe</option>
+                <option value="Histoire et mémoires de la Société des sciences physiques de Lausanne">Histoire et mémoires de la Société des sciences physiques de Lausanne</option>
+                <option value="History and Theory">History and Theory</option>
+                <option value="History of European Ideas">History of European Ideas</option>
+                <option value="History of Political Thought">History of Political Thought</option>
+                <option value="Hobbes Studies">Hobbes Studies</option>
+                <option value="International Journal of the Classical Tradition">International Journal of the Classical Tradition</option>
+                <option value="International Review of the Red Cross">International Review of the Red Cross</option>
+                <option value="Jahrbuch für Recht und Ethik">Jahrbuch für Recht und Ethik</option>
+                <option value="Jahrbuch: Schweizerische Gesellschaft für Familienforschung">Jahrbuch: Schweizerische Gesellschaft für Familienforschung</option>
+                <option value="Journal de la Société vaudoise d'utilité publique">Journal de la Société vaudoise d'utilité publique</option>
+                <option value="Journal des savants">Journal des savants</option>
+                <option value="Journal für Litteratur und Kunst">Journal für Litteratur und Kunst</option>
+                <option value="Journal helvétique">Journal helvétique</option>
+                <option value="Journal of the History of Ideas">Journal of the History of Ideas</option>
+                <option value="Journal of the History of Philosophy">Journal of the History of Philosophy</option>
+                <option value="Journal of the scientific laboratories">Journal of the scientific laboratories</option>
+                <option value="Juristische Schulung">Juristische Schulung</option>
+                <option value="L'Anthropologie">L'Anthropologie</option>
+                <option value="L'oeil">L'oeil</option>
+                <option value="La Revue">La Revue</option>
+                <option value="La Revue réformée">La Revue réformée</option>
+                <option value="La Semaine littéraire">La Semaine littéraire</option>
+                <option value="La Suisse romande: revue littéraire et artistique">La Suisse romande: revue littéraire et artistique</option>
+                <option value="Laval théologique et philosophique">Laval théologique et philosophique</option>
+                <option value="Le chrétien évangélique: revue religieuse de la Suisse romande">Le chrétien évangélique: revue religieuse de la Suisse romande</option>
+                <option value="Le conteur vaudois: journal de la Suisse romande">Le conteur vaudois: journal de la Suisse romande</option>
+                <option value="Lenzburger Neujahrsblätter">Lenzburger Neujahrsblätter</option>
+                <option value="Les Nouvelles littéraires">Les Nouvelles littéraires</option>
+                <option value="Lias">Lias</option>
+                <option value="Lippische Mitteilungen aus Geschichte und Landeskunde">Lippische Mitteilungen aus Geschichte und Landeskunde</option>
+                <option value="Litterarisches Archiv der Akademie zu Bern">Litterarisches Archiv der Akademie zu Bern</option>
+                <option value="Man and Nature / L'homme et la nature">Man and Nature / L'homme et la nature</option>
+                <option value="Max Weber Lectures Series">Max Weber Lectures Series</option>
+                <option value="Médium">Médium</option>
+                <option value="Mémoire">Mémoire</option>
+                <option value="Mémoire Vive">Mémoire Vive</option>
+                <option value="Mémoires et documents publiés par la Société d'histoire de la Suisse romande">Mémoires et documents publiés par la Société d'histoire de la Suisse romande</option>
+                <option value="Mémoires et observations recueillies par la Société oeconomique de Berne">Mémoires et observations recueillies par la Société oeconomique de Berne</option>
+                <option value="Mercure suisse">Mercure suisse</option>
+                <option value="Minerva">Minerva</option>
+                <option value="Mitteilungen aus des lippischen Geschichte und Landeskunde">Mitteilungen aus des lippischen Geschichte und Landeskunde</option>
+                <option value="Monuments vaudois">Monuments vaudois</option>
+                <option value="Musée Gutenberg suisse">Musée Gutenberg suisse</option>
+                <option value="Musée neuchâtelois">Musée neuchâtelois</option>
+                <option value="Museum Helveticum">Museum Helveticum</option>
+                <option value="Neophilologus">Neophilologus</option>
+                <option value="Neues Berner Taschenbuch">Neues Berner Taschenbuch</option>
+                <option value="Neues Berner Taschenbuch auf das Jahr ...">Neues Berner Taschenbuch auf das Jahr ...</option>
+                <option value="Neujahrsblatt der Literarischen Gesellschaft Bern">Neujahrsblatt der Literarischen Gesellschaft Bern</option>
+                <option value="Nineteenth-Century French Studies">Nineteenth-Century French Studies</option>
+                <option value="Notices d'utilité publique">Notices d'utilité publique</option>
+                <option value="Nouveau journal helvétique">Nouveau journal helvétique</option>
+                <option value="Nouvelle Bibliothèque ou histoire littéraire">Nouvelle Bibliothèque ou histoire littéraire</option>
+                <option value="Nouvelles de la République des Lettres">Nouvelles de la République des Lettres</option>
+                <option value="Nouvelles/Association des bibliothécaires suisses">Nouvelles/Association des bibliothécaires suisses</option>
+                <option value="Nuncius">Nuncius</option>
+                <option value="Oeuvres et critiques: revue internationale d'étude de la réception critique des oeuvres littéraires de langue française">Oeuvres et critiques: revue internationale d'étude de la réception critique des oeuvres littéraires de langue française</option>
+                <option value="Orbis Linguarum">Orbis Linguarum</option>
+                <option value="Ornicar">Ornicar</option>
+                <option value="Parergon">Parergon</option>
+                <option value="Philonsorbonne">Philonsorbonne</option>
+                <option value="Philosophical Transactions">Philosophical Transactions</option>
+                <option value="PMLA">PMLA</option>
+                <option value="Population">Population</option>
+                <option value="Recherches sur Diderot et sur l'&quot;Encyclopédie&quot;">Recherches sur Diderot et sur l'"Encyclopédie"</option>
+                <option value="Recueil de mémoires concernant l'oeconomie rurale">Recueil de mémoires concernant l'oeconomie rurale</option>
+                <option value="Renaissance Quarterly">Renaissance Quarterly</option>
+                <option value="Republics of Letters. A journal for the Study of Knowledge, Politics and the Arts">Republics of Letters. A journal for the Study of Knowledge, Politics and the Arts</option>
+                <option value="Revue à intégrer - via LL">Revue à intégrer - via LL</option>
+                <option value="Revue d'Anthropologie">Revue d'Anthropologie</option>
+                <option value="Revue d'Histoire des Sciences">Revue d'Histoire des Sciences</option>
+                <option value="Revue d'histoire des sciences et de leurs applications">Revue d'histoire des sciences et de leurs applications</option>
+                <option value="Revue d'Histoire des Sciences Humaines">Revue d'Histoire des Sciences Humaines</option>
+                <option value="Revue d'histoire ecclésiastique suisse">Revue d'histoire ecclésiastique suisse</option>
+                <option value="Revue d'histoire économique et sociale">Revue d'histoire économique et sociale</option>
+                <option value="Revue d'histoire et de philosophie religieuse">Revue d'histoire et de philosophie religieuse</option>
+                <option value="Revue d'Histoire littéraire de la France">Revue d'Histoire littéraire de la France</option>
+                <option value="Revue d'histoire suisse">Revue d'histoire suisse</option>
+                <option value="Revue de la Societé des enfants et amis de Villeneuve-de-Berg">Revue de la Societé des enfants et amis de Villeneuve-de-Berg</option>
+                <option value="Revue de Littérature Comparée">Revue de Littérature Comparée</option>
+                <option value="Revue de Suisse">Revue de Suisse</option>
+                <option value="Revue de synthèse">Revue de synthèse</option>
+                <option value="Revue de théologie et de philosophie">Revue de théologie et de philosophie</option>
+                <option value="Revue des deux mondes">Revue des deux mondes</option>
+                <option value="Revue du droit public et de la science politique en France et à l’étranger ">Revue du droit public et de la science politique en France et à l’étranger </option>
+                <option value="Revue du Vieux-Genève">Revue du Vieux-Genève</option>
+                <option value="Revue française d'histoire du livre">Revue française d'histoire du livre</option>
+                <option value="Revue française de droit constitutionnel">Revue française de droit constitutionnel</option>
+                <option value="Revue germanique internationale">Revue germanique internationale</option>
+                <option value="Revue historique vaudoise">Revue historique vaudoise</option>
+                <option value="Revue Médicale de la Suisse Romande">Revue Médicale de la Suisse Romande</option>
+                <option value="Revue neuchâteloise">Revue neuchâteloise</option>
+                <option value="Revue retrospective">Revue retrospective</option>
+                <option value="Revue suisse">Revue suisse</option>
+                <option value="Revue suisse d'art et d'archéologie / Zeitschrift für schweizerische Archäologie und Kunstgeschichte">Revue suisse d'art et d'archéologie / Zeitschrift für schweizerische Archäologie und Kunstgeschichte</option>
+                <option value="Revue suisse d'histoire">Revue suisse d'histoire</option>
+                <option value="Revue suisse de médecine">Revue suisse de médecine</option>
+                <option value="Revue suisse de numismatique">Revue suisse de numismatique</option>
+                <option value="Revue vaudoise de généalogie et d'histoire des familles">Revue vaudoise de généalogie et d'histoire des familles</option>
+                <option value="Revue Voltaire">Revue Voltaire</option>
+                <option value="Rivista di storia della filosofia">Rivista di storia della filosofia</option>
+                <option value="Rivista storica italiana">Rivista storica italiana</option>
+                <option value="Rodina">Rodina</option>
+                <option value="Schweizer Archiv für Heraldik">Schweizer Archiv für Heraldik</option>
+                <option value="Schweizer Museum">Schweizer Museum</option>
+                <option value="Schweizer-Journal">Schweizer-Journal</option>
+                <option value="Schweizerische Zeitschrift für Geschichte">Schweizerische Zeitschrift für Geschichte</option>
+                <option value="Schweizerische Zeitschrift für Religions- und Kulturgeschichte">Schweizerische Zeitschrift für Religions- und Kulturgeschichte</option>
+                <option value="Scientia">Scientia</option>
+                <option value="Social Semiotics">Social Semiotics</option>
+                <option value="Somnologie">Somnologie</option>
+                <option value="Sonderabdruck aus &quot;Zirkelcorrespondenz&quot;">Sonderabdruck aus "Zirkelcorrespondenz"</option>
+                <option value="Studies in Bibliography">Studies in Bibliography</option>
+                <option value="Studies in eighteenth-century culture">Studies in eighteenth-century culture</option>
+                <option value="Studies in Philosophy and Education">Studies in Philosophy and Education</option>
+                <option value="Studies on Voltaire and the eighteenth century">Studies on Voltaire and the eighteenth century</option>
+                <option value="Suisse Magazine">Suisse Magazine</option>
+                <option value="Swiss Political Science Review">Swiss Political Science Review</option>
+                <option value="Swiss-French studies / Etudes romandes">Swiss-French studies / Etudes romandes</option>
+                <option value="T'oung Pao">T'oung Pao</option>
+                <option value="Tangence">Tangence</option>
+                <option value="The American Political Science Review">The American Political Science Review</option>
+                <option value="The Book Collector">The Book Collector</option>
+                <option value="The British Art Journal">The British Art Journal</option>
+                <option value="The Eighteenth Century">The Eighteenth Century</option>
+                <option value="The Historical Journal">The Historical Journal</option>
+                <option value="The Mirror of Literature, Amusement, and Instruction">The Mirror of Literature, Amusement, and Instruction</option>
+                <option value="Theologische Zeitschrift">Theologische Zeitschrift</option>
+                <option value="Tijdschrift voor rechtsgeschiedenis = Revue d'histoire du droit = The legal history review">Tijdschrift voor rechtsgeschiedenis = Revue d'histoire du droit = The legal history review</option>
+                <option value="Topique">Topique</option>
+                <option value="Translation Studies">Translation Studies</option>
+                <option value="Trouvailles Lumières.Lausanne">Trouvailles Lumières.Lausanne</option>
+                <option value="Unsere Kunstdenkmäler: Mitteilungsblatt für die Mitglieder der Gesellschaft für Schweizerische Kunstgeschichte">Unsere Kunstdenkmäler: Mitteilungsblatt für die Mitglieder der Gesellschaft für Schweizerische Kunstgeschichte</option>
+                <option value="Versailles">Versailles</option>
+                <option value="Vestnik arxivista">Vestnik arxivista</option>
+                <option value="Vestnik PSTGU">Vestnik PSTGU</option>
+                <option value="Vibiscum">Vibiscum</option>
+                <option value="Women in French Studies">Women in French Studies</option>
+                <option value="xviii.ch">xviii.ch</option>
+                <option value="Zeitschrift für Ethnologie">Zeitschrift für Ethnologie</option>
+                <option value="Zeitschrift für schweizerische Geschichte">Zeitschrift für schweizerische Geschichte</option>
+                </select>
+                            </div>
+                          </td>
+
+                              <td class="fldset_ltype"><ul>
+                <li><label for="id_ltype_0"><input type="checkbox" name="ltype" value="p" id="id_ltype_0"> Primaire</label></li>
+                <li><label for="id_ltype_1"><input type="checkbox" name="ltype" value="s" id="id_ltype_1"> Secondaire</label></li>
+                </ul></td>
+
+                              <td class="fldset_mtype"><select name="mtype" id="id_mtype">
+                <option value="" selected="selected">---------</option>
+                <option value="2">Source / Correspondance</option>
+                <option value="4">Source / Egodocument (journal, livre de raison, etc.)</option>
+                <option value="8">Source / Essai, mémoire</option>
+                <option value="16">Source / Pièce littéraire</option>
+                <option value="7">Source / Procès-verbal</option>
+                <option value="15">Source / Document officiel (contrat, acte, etc.)</option>
+                <option value="1">Source / Autre catégorie</option>
+                <option value="12">Travail de séminaire</option>
+                <option value="11">Mémoire de licence/master</option>
+                <option value="13">Thèse de doctorat</option>
+                <option value="14">Etude non publiée</option>
+                </select></td>
+
+                              <td class="fldset_depot"><select name="depot" id="id_depot">
+                <option value="" selected="selected">---------</option>
+                <option value="28">Archives cantonales vaudoises (ACV)</option>
+                <option value="24">Archives d'Etat de Genève (AEG)</option>
+                <option value="44">Archives de l'Etat de Fribourg (AEF)</option>
+                <option value="48">Archives de l'Etat de Neuchâtel (AEN)</option>
+                <option value="41">Archives de la Ville de Lausanne (AVL)</option>
+                <option value="55">Archives fédérales suisses, Berne (AFS)</option>
+                <option value="59">Archives nationales, La Haye (NL-HaNa)</option>
+                <option value="26">Biblioteca Ambrosiana, Milano</option>
+                <option value="53">Bibliothèque cantonale et universitaire, Fribourg (BCUFR)</option>
+                <option value="16">Bibliothèque cantonale et universitaire, Lausanne (BCUL)</option>
+                <option value="31">Bibliothèque de Genève (BGE)</option>
+                <option value="57">Bibliothèque de la Société de l'Histoire du Protestantisme Français, Paris (BPF)</option>
+                <option value="38">Bibliothèque publique d'Yverdon (BPY)</option>
+                <option value="47">Bibliothèque publique et universitaire, Neuchâtel (BPUN)</option>
+                <option value="54">British Library, London</option>
+                <option value="39">Burgerbibliothek, Bern (BBB)</option>
+                <option value="32">Collection privée</option>
+                <option value="60">Koninklijke Bibliotheek, Den Haag</option>
+                <option value="52">Musée historique de Lausanne (MHL)</option>
+                <option value="58">Universitätsbibliothek, Basel (UBB)</option>
+                <option value="61">Universitätsbibliothek, Bern (UB)</option>
+                <option value="56">Universiteitsbibliotheek, Amsterdam</option>
+                <option value="25">Zentralbibliothek, Zürich (ZBZ)</option>
+                </select></td>
+
+                        </tr>
+                      </tbody>
+                      </table>
+
+
+                      <table class="fields-table fldset_row">
+                      <colgroup><col width="80">
+                      <col width="20">
+                      </colgroup><tbody>
+                        <tr>
+                          <th>Avec les mots-clés</th>
+                          <th>Société/Académie</th>
+                        </tr>
+                        <tr>
+                                <td>
+                            <div class="kwrds fldset_kwrds">
+                              <div class="kwrds_row">
+                                          <div class="grid_2 alpha kw_op"><select name="kw0_op" id="id_kw0_op">
+                <option value="or">Ou</option>
+                <option value="and" selected="selected">Et</option>
+                <option value="not">Sauf</option>
+                </select></div>
+                                <div class="grid_5 pkw_val">
+                                  <select id="id_kw0_p" class="pkw" name="kw0_p">
+                <option value="" selected="selected">&lt; mot-clé primaire &gt;</option>
+                <option value="182">Arts</option>
+                <option value="6">Droit et justice</option>
+                <option value="180">Economie</option>
+                <option value="11">Histoire</option>
+                <option value="181">Lieux géographiques</option>
+                <option value="27">Littérature</option>
+                <option value="7">Philosophie</option>
+                <option value="14">Politique</option>
+                <option value="18">Religion</option>
+                <option value="12">Sciences</option>
+                <option value="19">Société</option>
+                </select>
+                                </div>
+                                <div class="grid_8 skw_val">
+                                  <select class="skw" name="kw0_s" disabled="">
+                                    <option value="">&lt;  mot-clé secondaire  &gt;</option>
+                                  </select>
+                                </div>
+                                <div class="clear"></div>
+                                  </div>
+
+                              <div class="kwrds_row supp-fields hidden">
+                                <div class="grid_2 alpha kw_op"><select name="kw1_op" id="id_kw1_op">
+                <option value="or">Ou</option>
+                <option value="and" selected="selected">Et</option>
+                <option value="not">Sauf</option>
+                </select></div>
+                                <div class="grid_5 pkw_val">
+                                  <select id="id_kw1_p" class="pkw" name="kw1_p">
+                <option value="" selected="selected">&lt; mot-clé primaire &gt;</option>
+                <option value="182">Arts</option>
+                <option value="6">Droit et justice</option>
+                <option value="180">Economie</option>
+                <option value="11">Histoire</option>
+                <option value="181">Lieux géographiques</option>
+                <option value="27">Littérature</option>
+                <option value="7">Philosophie</option>
+                <option value="14">Politique</option>
+                <option value="18">Religion</option>
+                <option value="12">Sciences</option>
+                <option value="19">Société</option>
+                </select>
+                                </div>
+                                <div class="grid_8 skw_val">
+                                  <select class="skw" name="kw1_s" disabled="">
+                                    <option value="">&lt;  mot-clé secondaire  &gt;</option>
+                                  </select>
+                                </div>
+                                <div class="clear"></div>
+                              </div>
+
+                              <div class="kwrds_row supp-fields hidden">
+                                <div class="grid_2 alpha kw_op"><select name="kw2_op" id="id_kw2_op">
+                <option value="or">Ou</option>
+                <option value="and" selected="selected">Et</option>
+                <option value="not">Sauf</option>
+                </select></div>
+                                <div class="grid_5 pkw_val">
+                                  <select id="id_kw2_p" class="pkw" name="kw2_p">
+                <option value="" selected="selected">&lt; mot-clé primaire &gt;</option>
+                <option value="182">Arts</option>
+                <option value="6">Droit et justice</option>
+                <option value="180">Economie</option>
+                <option value="11">Histoire</option>
+                <option value="181">Lieux géographiques</option>
+                <option value="27">Littérature</option>
+                <option value="7">Philosophie</option>
+                <option value="14">Politique</option>
+                <option value="18">Religion</option>
+                <option value="12">Sciences</option>
+                <option value="19">Société</option>
+                </select>
+                                </div>
+                                <div class="grid_8 skw_val">
+                                  <select class="skw" name="kw2_s" disabled="">
+                                    <option value="">&lt;  mot-clé secondaire  &gt;</option>
+                                  </select>
+                                </div>
+                                <div class="clear"></div>
+                                  </div>
+
+                              <div class="kwrds_row supp-fields hidden">
+                                <div class="grid_2 alpha kw_op"><select name="kw3_op" id="id_kw3_op">
+                <option value="or">Ou</option>
+                <option value="and" selected="selected">Et</option>
+                <option value="not">Sauf</option>
+                </select></div>
+                                <div class="grid_5 pkw_val">
+                                  <select id="id_kw3_p" class="pkw" name="kw3_p">
+                <option value="" selected="selected">&lt; mot-clé primaire &gt;</option>
+                <option value="182">Arts</option>
+                <option value="6">Droit et justice</option>
+                <option value="180">Economie</option>
+                <option value="11">Histoire</option>
+                <option value="181">Lieux géographiques</option>
+                <option value="27">Littérature</option>
+                <option value="7">Philosophie</option>
+                <option value="14">Politique</option>
+                <option value="18">Religion</option>
+                <option value="12">Sciences</option>
+                <option value="19">Société</option>
+                </select>
+                                </div>
+                                <div class="grid_8 skw_val">
+                                  <select class="skw" name="kw3_s" disabled="">
+                                    <option value="">&lt;  mot-clé secondaire  &gt;</option>
+                                  </select>
+                                </div>
+                                <div class="clear"></div>
+                              </div>
+
+                              <div class="more-field"><button type="button" title="Afficher plus de champs" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" role="button" aria-disabled="false" style="font-size: 9px;"><span class="ui-button-icon-primary ui-icon ui-icon-plusthick"></span><span class="ui-button-text">Plus de champs</span></button></div>
+                            </div>
+                          </td>
+
+                          <td class="fldset_society"><select name="society" id="id_society">
+                <option value="" selected="selected">---------</option>
+                <option value="39">Abbaye de l'Arc - Lausanne (1691-aujourd'hui)</option>
+                <option value="43">Abbaye ou société de tir</option>
+                <option value="59">Académie - Bâle</option>
+                <option value="71">Académie - Berne (Hohe Schule - Bern)</option>
+                <option value="38">Académie - Besançon</option>
+                <option value="55">Académie - Bologne</option>
+                <option value="61">Académie - Bordeaux</option>
+                <option value="37">Académie - Dijon</option>
+                <option value="66">Académie - Florence</option>
+                <option value="41">Académie - Genève</option>
+                <option value="28">Académie - Groningen</option>
+                <option value="10">Académie - Lausanne</option>
+                <option value="65">Académie - Leipzig</option>
+                <option value="58">Académie - Leyde</option>
+                <option value="56">Académie - Lyon</option>
+                <option value="53">Académie - Marseille</option>
+                <option value="57">Académie - Montpellier</option>
+                <option value="29">Académie - St. Petersbourg</option>
+                <option value="27">Académie - Stockholm</option>
+                <option value="45">Académie - Turin</option>
+                <option value="44">Académie des Jeux floraux - Toulouse</option>
+                <option value="64">Académie des sciences - Munich</option>
+                <option value="23">Académie des sciences - Paris</option>
+                <option value="40">Académie française - Paris</option>
+                <option value="25">Académie royale - Göttingen</option>
+                <option value="51">Académie royale - La Rochelle</option>
+                <option value="36">Académie royale des sciences - Berlin</option>
+                <option value="63">Cercle de la Palud - Lausanne (1766-1843)</option>
+                <option value="24">Cercle de la Rue de Bourg - Lausanne (1761-1803)</option>
+                <option value="62">Cercle littéraire - Lausanne (1819-aujourd'hui)</option>
+                <option value="22">Club helvétique - Paris</option>
+                <option value="20">Groupe de Coppet</option>
+                <option value="72">Institut politique - Berne (1787-1798)</option>
+                <option value="30">Politisches Institut (Institut für die politische Jugend) - Berne (1786-1795)</option>
+                <option value="52">Séminaire français - Lausanne</option>
+                <option value="67">Société d'histoire de la Suisse romande (1837-aujourd'hui)</option>
+                <option value="9">Société des citoyens (Patriotische Gesellschaft) - Berne</option>
+                <option value="70">Société des sciences - Göttingen</option>
+                <option value="54">Société des sciences naturelles - Zurich</option>
+                <option value="11">Société des sciences physiques - Lausanne (1783-1790)</option>
+                <option value="33">Société économique</option>
+                <option value="69">Société économique - Aigle (1761-1764)</option>
+                <option value="6">Société économique - Berne (1759-?)</option>
+                <option value="12">Société économique - Lausanne (1761-v.1771)</option>
+                <option value="17">Société économique - Nyon (1761-1765)</option>
+                <option value="18">Société économique - Payerne (1761-v.1767)</option>
+                <option value="8">Société économique - Vevey (1761-v.1766)</option>
+                <option value="7">Société économique - Yverdon (1761-1827)</option>
+                <option value="19">Société helvétique (v. 1761-1797)</option>
+                <option value="60">Société helvétique- Zurich (1727-1746)</option>
+                <option value="31">Société littéraire</option>
+                <option value="15">Société littéraire - Lausanne (1772-1783)</option>
+                <option value="16">Société littéraire - Morges (1767-1969)</option>
+                <option value="68">Société littéraire - Yverdon</option>
+                <option value="13">Société littéraire du comte de la Lippe - Lausanne (1742-1747)</option>
+                <option value="32">Société morale</option>
+                <option value="14">Société morale - Berne (v.1764-1768)</option>
+                <option value="5">Société morale - Lausanne (1765-1768)</option>
+                <option value="21">Société morale - Zurich</option>
+                <option value="26">Société royale - Londres</option>
+                <option value="49">Société suisse d'utilité publique (1810-?)</option>
+                <option value="50">Société suisse des sciences naturelles (1815-?)</option>
+                <option value="48">Société vaudoise d'utilité publique (1826-?)</option>
+                <option value="47">Société vaudoise des sciences naturelles (1819-?)</option>
+                </select></td>
+
+                        </tr>
+                      </tbody>
+                      </table>
+
+
+                      <table class="fields-table fldset_row">
+                      <tbody>
+                        <tr>
+                          <th>Date de parution</th>
+                          <th>Date d'enregistrement</th>
+                          <th>Langue</th>
+                        </tr>
+                        <tr>
+                              <td class="fldset_date">
+                                      <div><span>de&nbsp;</span><span><input id="id_date_from" type="text" placeholder="aaaa.mm" name="date_from" maxlength="7"></span><span>&nbsp;à&nbsp;</span><span><input id="id_date_to" type="text" placeholder="aaaa.mm" name="date_to" maxlength="7"></span></div>
+                              </td>
+
+                              <td class="fldset_mdate">
+                                      <div><span>de&nbsp;</span><span><input name="mdate_from" maxlength="10" placeholder="aaaa.mm.jj" type="text" id="id_mdate_from" size="10"></span><span>&nbsp;à&nbsp;</span><span><input name="mdate_to" maxlength="10" placeholder="aaaa.mm.jj" type="text" id="id_mdate_to" size="10"></span></div>
+                              </td>
+
+                              <td class="fldset_language"><select name="l" id="id_l">
+                <option value="" selected="selected">&lt; toutes &gt;</option>
+                <option value="2">Français</option>
+                <option value="3">Allemand</option>
+                <option value="7">Italien</option>
+                <option value="5">Anglais</option>
+                <option value="6">Latin</option>
+                <option value="9">Autre</option>
+                </select></td>
+
+                        </tr>
+                      </tbody>
+                      </table>
+
+
+                      <table class="fields-table fldset_row">
+                      <tbody>
+                        <tr>
+                          <th>Projets <select name="proj_op" id="id_proj_op">
+                <option value="or">Ou</option>
+                <option value="and" selected="selected">Et</option>
+                <option value="not">Sauf</option>
+                </select></th>
+                        </tr>
+                        <tr>
+                          <td class="fldset_proj">
+                            <div class="float-col"><ul>
+                <li><label for="id_proj_0"><input type="checkbox" name="proj" value="3" id="id_proj_0"> Mercure suisse - Journal helvétique (1732-1782)</label></li>
+                <li><label for="id_proj_1"><input type="checkbox" name="proj" value="4" id="id_proj_1"> Correspondance Mirabeau - Sacconay (1731-1784) </label></li>
+                <li><label for="id_proj_2"><input type="checkbox" name="proj" value="5" id="id_proj_2"> Société du comte de la Lippe (1742-1747)</label></li>
+                <li><label for="id_proj_3"><input type="checkbox" name="proj" value="6" id="id_proj_3"> La Harpe et la Russie (1783-1795)</label></li>
+                <li><label for="id_proj_4"><input type="checkbox" name="proj" value="7" id="id_proj_4"> Rousseau et la Suisse</label></li>
+                <li><label for="id_proj_5"><input type="checkbox" name="proj" value="8" id="id_proj_5"> Gibbon et Lausanne</label></li>
+                <li><label for="id_proj_6"><input type="checkbox" name="proj" value="9" id="id_proj_6"> Le droit naturel en Suisse (1625-1850)</label></li>
+                <li><label for="id_proj_7"><input type="checkbox" name="proj" value="10" id="id_proj_7"> Correspondance Barbeyrac (1702-1743)</label></li>
+                <li><label for="id_proj_8"><input type="checkbox" name="proj" value="11" id="id_proj_8"> A. C. Chavannes et sa "Science générale de l'homme"  (1788)</label></li>
+                <li><label for="id_proj_9"><input type="checkbox" name="proj" value="12" id="id_proj_9"> Théâtre dans le Pays de Vaud (1757-1804)</label></li>
+                </ul></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                      </table>
+
+                      <span class="ui-state-default collapse_btn"><span class="ui-icon ui-icon-triangle-1-n"></span></span>
+
+                    </div>
+                  </div>
+
+
+
+
+                <script type="text/javascript">
+                (function($){
+                    $(document).ready(function(){
+                    // On Submit Form, remove field with no value, so the url is not polluted with empty values
+                    $("#biblio_search").submit(function(){
+
+                      $("#biblio_search .fldset_xfld .xfld_row").each(function(i,n){
+                          var $this = $(this), v = $this.find("input[name$=_val]").val();
+                          if (!v) {
+                              $this.find("[name$=_op], [name$=_fld], [name$=_val]").removeAttr("name");
+                          }
+                      });
+
+                            $("#biblio_search .fldset_kwrds .kwrds_row").each(function(i,n){
+                                var $this = $(this),
+                            v = $this.find(".pkw_val select").val();
+                                if (!v) {
+                                    $this.find("[name^=kw]").removeAttr("name");
+                                } else {
+                          var skw = $this.find("[name$=_s]");
+                          if (!skw.val()) { skw.removeAttr("name"); }
+                        }
+                            });
+
+                      $("#id_mdate_from, #id_mdate_to, #id_date_from, #id_date_to, #id_l").each(function(i,n){
+                          var $this = $(this);
+                          if (!$this.val()) { $this.removeAttr("name"); }
+                      });
+
+                      if ($("#biblio_search [name=ltype]:checked").val() == '__') { $("#biblio_search [name=ltype]").removeAttr("name"); }
+                      if ($("#biblio_search [name=proj]:checked").length == 0) { $("#id_proj_op").removeAttr("name"); }
+                      if ($("#biblio_search [name=journal]").val() == '') { $("#biblio_search [name=journal]").removeAttr("name"); }
+                      if ($("#biblio_search [name=society]").val() == '') { $("#biblio_search [name=society]").removeAttr("name"); }
+                      if ($("#biblio_search [name=mtype]").val() == '') { $("#biblio_search [name=mtype]").removeAttr("name"); }
+
+                      return true;
+                    });
+
+
+                    // Submit & reset button
+                    $(".cmd_bar button[type=submit]").button({icons: {primary: "ui-icon-search"}});
+                    $(".cmd_bar button[type=reset]").click(function(){document.location=".";}).button({icons: {primary: "ui-icon-close"}});
+
+
+                        // Display Additional fields
+                        $(".more-field").each(function(){
+                      $(this).append(
+                        $("<button>",{'type':"button", 'text':"Plus de champs", 'title':"Afficher plus de champs"})
+                              .css("font-size", "9px")
+                              .button({icons: {primary: "ui-icon-plusthick"}, text: false})
+                              .click(function(evt){
+                                  var $this= $(evt.target), ctxt = $this.parents("td").eq(0);
+                                  $(".supp-fields.hidden", ctxt).eq(0).hide().removeClass("hidden").slideDown('fast');
+                                  if ($(".supp-fields.hidden", ctxt).length==0) { $this.parents(".more-field").eq(0).remove(); }
+                            })
+                      );
+                    });
+
+
+                    // Collapse fieldset button 2
+                    var savedSearchFiltersHeight = 300;
+                    $(".collapse_btn")
+                        .append('<span class="ui-icon ui-icon-triangle-1-n"></span>')
+                        .addClass("ui-state-default")
+                        .hover(
+                           function(){ $(this).removeClass("ui-state-default").addClass("ui-state-hover"); },
+                         function(){ $(this).removeClass("ui-state-hover").addClass("ui-state-default"); }
+                      )
+                      .click(function(){
+                        var $this = $(this), $block = $this.parents(".search-filters").eq(0),
+                          $cdr = $block.find(".cadre"), $fldset = $block.find("fieldset"),
+                          $collapse_status = $block.find("input.collapse_status");
+                        if ($cdr.hasClass('collapsed')) {
+                          $cdr.removeClass('collapsed');
+                          $collapse_status.remove();
+                          $cdr.animate({'height': savedSearchFiltersHeight + 'px'}, 'fast', function(){
+                            $cdr.css('height', '');
+                            $('.fldset_xfld th', $cdr).html('Avec les mots dans les champs');
+                          });
+                          $this.find(".ui-icon").addClass("ui-icon-triangle-1-n").removeClass("ui-icon-triangle-1-s");
+                        } else {
+                          if ($collapse_status.length > 0) {
+                            $collapse_status.val("1");
+                          } else {
+                             $cdr.append($("<input/>", {'type': "hidden", 'id': "id_cl1", 'name': "cl1", 'value': "1"}));
+                          }
+                          savedSearchFiltersHeight = $cdr.height();
+                          $cdr.animate({'height': '15px'}, 'fast', function(){
+                            $cdr.addClass('collapsed');
+                            $('.fldset_xfld th', $cdr).html('Modifier la recherche avancée');
+                          });
+                          $this.find(".ui-icon").addClass("ui-icon-triangle-1-s").removeClass("ui-icon-triangle-1-n");
+                        }
+
+                      });
+
+                    // Collapse rows where the the collapse_status is set to 1
+                    $(".search-filters:has(.collapse_btn)").each(function(){
+                            if ($(this).find("input.collapse_status").val()) {
+                          var oldFxOff = $.fx.off;
+                        $.fx.off = true
+                        $(this).find(".collapse_btn").click();
+                        $.fx.off = oldFxOff;
+                      }
+                    });
+
+
+                        // Field errors reset on change
+                    $(".field_error input").focus(function(){
+                        $(this).parent(".field_error").removeClass("field_error");
+                    });
+
+
+                    // Keywords handling
+                    var skw_empty_item_tpl = ['<  mot-clé secondaire  >', '<  mot-clé secondaire de "%s"  >'];
+                    function updateSecKwrds(pkw_elem, skw_val){
+                      var $pkw = $(pkw_elem), $skw = $pkw.parent().next().find("select.skw"),
+                        pk_id = parseInt($pkw.val());
+                      if (isNaN(pk_id) || pk_id<=0 ) {
+                        $skw.val("").prop("disabled", true);
+                        $skw.find("option[value='']").text(skw_empty_item_tpl[0]);
+                      } else {
+                        if ($skw.attr("datasrc")) {
+                          skw_val = parseInt($skw.attr("datasrc"));
+                          $skw.removeAttr("datasrc");
+                        }
+                        $.get("/fiches/ajax_search/",
+                          { model_name: "SecondaryKeyword", q: pk_id, search_field: "=parent__id" },
+                          function(data){
+                            var data_array = data.split("\n"), idx=0, data_rec=[], opt_elem;
+                            $skw.find("option[value!='']").remove();
+                            for (idx=0; idx<data_array.length; idx++){
+                              data_rec = data_array[idx].split("|");
+                              if (data_rec && data_rec[1]) {
+                                opt_elem = $("<option>",{text: data_rec[0], value: data_rec[1]});
+                                if (skw_val && skw_val == data_rec[1]) { opt_elem.attr("selected", "selected"); }
+                                $skw.append(opt_elem);
+                              }
+                            }
+                            $skw.find("option[value='']").text(skw_empty_item_tpl[1].replace('%s', $pkw.find(":selected").text()));
+                            $skw.prop("disabled", false);
+                          }
+                        );
+                      }
+                    }
+
+                    $(".kwrds select.pkw").change(function(){
+                      updateSecKwrds(this);
+                    }).change();
+
+                    });
+                })(jQuery);
+                </script>
+
+
+
+                </form></div>
+                </div>
+        </mat-tab>
+
+        <mat-tab label="Personnes">
+            <div class="content">
+
+                <style>
+                  #search-results .paginator { border-radius: 2px; margin-bottom: 5px; }
+                  #search-results .results li { padding: 4px 2px; }
+                  #search-results .results li:nth-child(2n) { background-color: #f0f0f0; }
+                </style>
+
+                <div id="search-results">
+
+                <div class="paginator">
+                  <div class="pagination">
+
+
+                    <a class="page" href="/chercher/person/list?q=A">A</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=B">B</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=C">C</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=D">D</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=E">E</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=F">F</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=G">G</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=H">H</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=I">I</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=J">J</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=K">K</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=L">L</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=M">M</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=N">N</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=O">O</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=P">P</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=Q">Q</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=R">R</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=S">S</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=T">T</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=U">U</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=V">V</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=W">W</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=X">X</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=Y">Y</a>
+
+
+
+                    <a class="page" href="/chercher/person/list?q=Z">Z</a>
+
+
+
+
+                    <span class="page current">Tous</span>
+
+                  </div>
+                </div>
+
+
+                <ul class="results">
+
+                  <li>
+                    <a href="/fiches/bio/1648/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Abauzit, Firmin (1679 - 1767)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/18/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Allamand, François-Louis (1709 - 1784)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/19/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Allamand, Jean Nicolas Sébastien (1713 - 1787)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/617/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Altmann, Johann Georg (1695 - 1758)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3352/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Auberjonois, Isaac-Louis (1741-1815)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2487/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Balthasar, Joseph Anton Felix von (1737 - 1810)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/21/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Barbeyrac, Jean (1674 - 1744)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1764/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Barnaud, Barthélemy (1693 - 1747)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2372/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Barras, Tobie (1746 - 1813)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/704/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Baulacre, Léonard (1670 - 1761)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/22/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bergier, Gabriel (1659 - 1736)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/600/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bernoulli, Daniel (1700 - 1782)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/554/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bernoulli, Jacques (1654 - 1705)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/706/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bernoulli, Jean I (1667 - 1748)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1870/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bernoulli, Jean II (1710 - 1790)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1871/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bernoulli, Jean III (1744 - 1807)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/16/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bertrand, Elie (1713 - 1797)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/17/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bertrand, Jean (1708 - 1777)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/23/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bertrand, Jean-Elie (1737 - 1778)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/241/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bodmer, Johann Jakob (1698 - 1783)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/259/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bolomey, Benjamin (v. 1739 - 1819)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/449/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bondeli, Julie (1732 - 1778)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/275/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bonjour, Noé Antoine Abraham (v. 1731 - 1807)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/342/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bonnet, Charles (1720 - 1793)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/354/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bons, François-Louis de (1723 - 1797)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/167/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bonstetten, Karl Emanuel von (1706 - 1773)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/25/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bonstetten, Karl Viktor von (1745 - 1832)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/358/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bourguet, Louis (1678 - 1742)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/27/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bousquet, Marc-Michel (1696 - 1762)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/427/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Breitinger, Johann Jakob (1701 - 1776)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1657/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bridel, Jean-Louis-Philippe (1759 - 1821)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/28/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bridel, Philippe-Sirice (1757 - 1845)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3311/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bruhl, Heinrich (1700-1763)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/395/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Burlamaqui, Jean-Jacques (1694 - 1748)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2373/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Bussard, Jean-François-Marcellin (1800 - 1853)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1649/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Calandrini, Jean-Louis (1703 - 1758)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/29/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Carrard, Benjamin Samuel (1730 - 1789)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/372/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Carrard, Christophle-Benjamin (1690 - 1755)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2919/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Carrard, Henri Vincent (1766 - 1820)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/30/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Cart, Jean-Jacques (1748 - 1813)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/743/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Castillon, Jean de (1709 - 1791)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2480/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Cazenove d'Arlens [-Constant d'Hermenches], Constance de (1755 - 1825)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3355/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Cérenville, Charles-Alexandre (1728-1796)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1352/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Chaillet, Henri-David (1751 - 1823)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1476/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Chandieu, Charles de (v. 1659 - 1728)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/707/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Charrière de Sévery [-Chandieu], Catherine de (1741 - 1796)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/295/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Charrière de Sévery, Salomon de (1724 - 1794)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1699/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Charrière de Sévery, Wilhelm de (1767 - 1836)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/32/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Charrière [-Saussure de Bavois], Angélique de (1732 - 1817)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/33/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Charrière, Isabelle de, dit Belle van Zuylen (1740 - 1805)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/34/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Chavannes, Alexandre César (1731 - 1800)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2361/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Chavannes, Daniel-Alexandre (1765 - 1846)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1846/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Chouet, Jean-Robert (1642 - 1731)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2294/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Clavel de Brenles [-Chavannes], Etiennette (1724 - 1780)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/39/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Clavel de Brenles, Jacques Abram Daniel (1717 - 1771)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2917/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Comte, Charles (1782 - 1837)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2351/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant d'Hermenches, Auguste (1777 - 1862)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1329/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant d'Hermenches, David-Louis (1722 - 1785)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2664/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque [-Pictet], Charlotte (1734 - 1766)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1563/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, César (1777 - 1868)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1589/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, Charles (1762 - 1835)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1306/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, David (1638 - 1733)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/263/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, Jacob (1645 - 1732)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1328/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, Juste (1726 - 1812)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2343/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, Philippe (1724 - 1756)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/298/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, Rosalie (1758 - 1834)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/42/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, Samuel (1729 - 1800)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/725/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, Samuel (père) (1676 - 1756)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2669/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Rebecque, Victor (1773 - 1850)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1824/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant de Villars, Guillaume-Anne (1750 - 1838)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/41/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Constant, Benjamin (1767 - 1830)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/352/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Courlande, Caroline-Louise, duchesse de (1748 - 1782)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/43/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Court de Gébelin, Antoine (v. 1725 - 1784)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/35/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Court, Antoine (1695 - 1760)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1512/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Cramer, Gabriel (1723 - 1793)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/578/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Cramer, Gabriel (prof.) (1704 - 1752)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1869/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Cramer, Jean (1701 - 1773)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2990/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Cramer, Jean Antoine (II) (1757 - 1818)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1334/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Crousaz de Mézery, Henri de (1740 - 1782)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/44/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Crousaz, Abraham de (1629 - 1710)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/15/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Crousaz, Jean-Pierre de (1663 - 1750)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/732/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Crousaz, Rodolphe de (1710 - 1776)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/579/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Cuentz, Gaspard [Künz, Kaspar] (1676 - 1752)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/46/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Curtat, Louis Auguste (1759 - 1832)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/47/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Dapples, Christian (1740 - 1801)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/50/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Dapples, Jean Marc Samuel Louis (1760 - 1840)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/49/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Dapples, Jean-François (1690 - 1772)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2179/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Dapples, Jean-Samuel (1726 - 1804)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1655/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Dassier, Jean (1676 - 1763)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/53/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Davel, Jean Daniel Abraham (1670 - 1723)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1905/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Desmaizeaux, Pierre (v. 1673 - 1745)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1693/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Develey, Emmanuel (1764 - 1839)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/55/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Deyverdun, Jacques Georges (1734 - 1789)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2225/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Dompierre, François-Rodolphe de (1775 - 1844)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2823/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Du Peyrou, Pierre-Alexandre (1729 - 1794)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/297/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Ducros, Louis (1748 - 1810)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2224/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Dufour, Guillaume-Henri (1787 - 1875)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2829/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Dutoit, Jean-Philippe, dit Dutoit-Membrini (1721 - 1793)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2298/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Effinguer de Wildegg [- de Charrière de Sévery], Angletine (1770-1848) (1770 - 1848)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/112/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Engel, Samuel (1702 - 1784)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/332/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Erlach, Gabriel Albrecht von (1739 - 1802)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3142/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Escher, Hans Caspar (1678 - 1762)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1867/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Fauche, Samuel (1732 - 1803)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/153/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Felice, Fortunato Bartolomeo de (1723 - 1789)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/125/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Fellenberg, Daniel von (1736-1801) (1736 - 1801)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/695/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Formey, Johann Heinrich Samuel (1711 - 1797)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2895/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gagnebin, Abraham (1707 - 1800)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/689/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gagnebin, Daniel (1709 - 1781)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3277/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Garcin, Jean-Laurent (1733 - 1781)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/468/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Garcin, Laurent (1683 - 1752)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2489/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gautier, Jean-Antoine (1674 - 1729)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2666/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gentils de Langallerie [-Constant], Angélique (1731 - 1771)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/733/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gentils, Philippe de, marquis de Langallerie (1710 - 1773)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/728/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gessner, Salomon (1730-1788) (1730 - 1788)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/156/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gibbon, Edward (1737 - 1794)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/109/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gillies, John (1747 - 1836)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/261/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gingins, Antoine-Charles de (1767 - 1823)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/260/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Gingins, Wolfgang-Charles de (1728 - 1811)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/327/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Glayre, Maurice (1743 - 1819)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1881/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Goethe, Johann Wolfgang von (1749 - 1832)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1339/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Golowkin, Alexandre, comte de (1732 - 1781)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/320/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Grasset, François (1723 - 1789)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2281/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Guiguer de Prangins [-Clevland], Matilda (1758 - 1817)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/262/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Guiguer de Prangins, Louis-François (1741 - 1786)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1891/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Haldimand, Frédéric (1718 - 1791)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/123/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Haller, Albrecht von (1708 - 1777)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/246/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Haller, Gottlieb Emanuel von (1735 - 1786)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2089/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Heidegger, Johann Heinrich (1633 - 1698)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/271/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Hennezel, Béat de (1733 - 1810)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3356/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Herrenschwand, Johann Friedrich (1715-1798)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1418/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Heubach, Jean-Pierre (1736 - 1799)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2346/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Holroyd, John Baker, Lord Sheffield (1735 - 1821)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1838/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Hottinger, Johann Jakob (1652 - 1735)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1645/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Huber, Jean (1721 - 1786)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1482/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Huc-Mazelet, Jeanne (1765 - 1852)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/126/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Iselin, Isaak (1728 - 1782)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2485/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Iselin, Jakob Christoph (1681 - 1737)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/497/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Ivernois, Jean-Antoine d' (1703 - 1765)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1720/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Jallabert, Jean (1712 - 1768)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1671/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Jaquet-Droz, Pierre (1721 - 1790)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1330/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Jenner, Beat Louis Nicolas (1722 - 1782)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3138/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Jenner, Gottlieb (1696 - 1774)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2128/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Jomini, Antoine Henri (1779 - 1869)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1558/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">La Harpe, Amédée de (1754 - 1796)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/58/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">La Harpe, Frédéric-César de (1754 - 1838)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/59/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Lanteires, Jean (1756 - 1797)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2484/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Lauffer, Johann Jakob (1688 - 1734)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/400/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Le Clerc, Jean (1657 - 1736)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3139/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Lerber, Sigmund Ludwig (1723 - 1783)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2345/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Leresche, Jean Pierre (1711 - 1785)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1876/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Leu, Johann Jacob (1689 - 1768)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1397/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Lignon, Jacques Bibaud, marquis du (v. 1677 - 1746)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/350/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Lippe, Simon Auguste, comte de la (1727 - 1782)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/61/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Loys de Bochat, Charles Guillaume (1695 - 1754)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/63/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Loys de Cheseaux, Charles-Louis (1730 - 1789)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/62/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Loys de Cheseaux, Jean-Philippe (1718 - 1751)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1331/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Loys de Middes, Etienne de (1722 - 1802)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/605/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Lullin, Ami (1695 - 1756)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1652/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Lullin, Michel (1695 - 1781)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2915/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Lullin, Pierre (1712 - 1789)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3360/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mestral de Saint-Saphorin, Armand de (1738-1805)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2280/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mestral [-Guiguer], Elisabeth-Sophie de (1748 - 1801)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1389/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mestral, Charles Albert de (1740 - 1809)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/739/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Meuron, Etienne (1675 - 1750)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2515/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Micheli du Crest, Jacques-Barthélemy (1690 - 1766)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/65/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mingard, Gabriel (v. 1729 - 1786)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1273/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mirabeau [-Castellane], Françoise de</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/269/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mirabeau, Victor de Riqueti, marquis de (1715 - 1789)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2831/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mniszech, Joseph-Jean (v.1740-1797)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2832/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mniszech, Michel-Georges (1742-1806)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/66/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Monod, Henri (1753 - 1833)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/627/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Montmollin, Ferdinand de (1683 - 1755)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/78/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Montolieu [-Polier, -de Crousaz], Isabelle de (1751 - 1832)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3279/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Montolieu, Frédéric-Charles, baron de</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1332/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Montolieu, Louis, baron de (1727 - 1800)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1578/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Muller de la Mothe, Georges-Albert (1754 - 1824)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/68/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Muralt, Beat Ludwig von (v. 1665 - 1749)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/69/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Muret, Jean-Louis (1715 - 1796)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/70/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Muret, Jules-Nicolas-Emmanuel (1759 - 1847)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2914/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mussard, Bénigne (1657 - 1722)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2918/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Mussard, Pierre (1690 - 1767)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/45/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Necker [-Curchod], Suzanne (v. 1737 - 1794)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/305/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Necker, Jacques (1732 - 1804)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/595/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Ostervald, Frédéric Samuel (1713 - 1795)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/180/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Ostervald, Jean Frédéric (1663 - 1747)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2341/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Pacius de la Motte, Charles (v. 1667 - 1751)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/72/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Pavillard, Daniel (1703 - 1775)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1443/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Perregaux, Alexandre (1749 - 1808)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/373/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Pesme de Saint-Saphorin, François-Louis de (1668 - 1737)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/288/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Pestalozzi, Johann Heinrich (1746 - 1827)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2916/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Pictet, Pierre (1703 - 1768)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2921/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Pidou, François (1799 - 1877)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/76/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Pillichody, Jean-Georges (1715 - 1783)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/402/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Piot, Jacques-Samuel-Louis (1743 - 1812)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/81/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier de Bottens, Antoine-Noé (1713 - 1783)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/80/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier de Bottens, Georges (1675 - 1759)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1875/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier de Bottens, Jeanne-Françoise (1759 - 1839)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/299/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier de Corcelles [-Saussure, -Aubonne], Louise (1726 - 1796)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/82/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier de Corcelles, Jonathan (1733 - 1796)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/83/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier de Saint-Germain, Antoine (1705 - 1797)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/276/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier de Vernand, Jean-Henri (1715 - 1791)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2671/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier, Antoine Louis, dit l'Indien (1741 - 1795)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/79/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier, Elisabeth Marianne, dite la chanoinesse (1740 - 1817)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1434/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Polier, Henri (1754 - 1821)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/84/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Pont-Wullyamoz [-Burnand], Marie-Louise-Françoise de (1751 - 1814)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/85/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Porta, Marc-Antoine (1725 - 1781)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3073/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Porta, Samuel (1716 - 1790)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2936/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Prevost, Pierre (1751 - 1839)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2528/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Razoumowsky, Grégoire de (1759 - 1837)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/86/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Reverdil, Elie Salomon François (1732 - 1808)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3366/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Reverdil, Marc (1734-1790)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/88/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Rosset de Rochefort, Jean-Alphonse (1709 - 1766)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/122/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Rousseau, Jean-Jacques (1712 - 1778)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/89/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Ruchat, Abraham (1680 - 1750)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/257/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Sablet, François (1745 - 1819)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1268/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Sablet, Jacob (1720 - 1798)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/301/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Sablet, Jacques (1749 - 1803)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/744/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Sacconay, Marc Charles Frédéric de (1714 - 1788)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2117/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Saussure, César de (1705 - 1783)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3367/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Say, Jean-Baptiste (1767-1832)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/182/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Schmid, Georg Ludwig (1720-1805)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2116/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Schüppach, Michel (1707 - 1781)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3141/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Schweizer, Johann Heinrich (1646 - 1705)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2861/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Secretan, Charles (I) (1784 - 1858)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2920/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Secretan, Charles (II) (1815 - 1895)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/90/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Secretan, Philippe-Abram-Louis (1756 - 1826)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3136/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Seelmatter, Johann Caspar (1644 - 1715)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/91/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Seigneux de Correvon, Gabriel (1695 - 1775)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/92/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Seigneux, François de (1699 - 1775)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1592/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Servan, Joseph Michel Antoine (1737 - 1807)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/93/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Sinner de Ballaigues, Johann-Rudolf (1730 - 1787)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3264/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Snell, Wilhelm (1789-1851) (1789 - 1851)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/94/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Staël [-Necker], Germaine de (1766 - 1817)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1414/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Stapfer, Philipp Albert (1766 - 1840)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/95/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Struve, Henri (1751 - 1826)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/242/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Sulzer, Johann Georg (1720 - 1779)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/97/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Tissot, Auguste (1728 - 1797)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/488/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Tollot, Jean-Baptiste (1698 - 1773)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2368/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Trembley, Abraham (1710 - 1784)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2328/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Tronchin, François (1704 - 1798)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1647/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Tronchin, Théodore (1709 - 1781)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3140/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Tscharner, Karl Ludwig Salomon (1754 - 1841)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1333/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Tscharner, Vincent Louis, bailli (1722 - 1793)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/101/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Tscharner, Vinzenz Bernhard (1728 - 1778)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/1690/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Turrettini, Gédéon (1723 - 1782)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/572/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Turrettini, Jean-Alphonse (1671 - 1737)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/14/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Vattel, Emer de (1714 - 1767)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/102/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Venel, Jean-André (1740 - 1791)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/103/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Verdeil, François (1747 - 1832)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/273/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Vernes, François (1765 - 1834)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/346/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Vernes, Jacob (1728 - 1791)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/385/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Vernet, Jacob (1698 - 1789)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/104/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Vicat, Béat-Philippe (1715 - 1770)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/106/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Vicat, Philippe-Rodolphe (1742 - 1783)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2913/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Vitriarius, Philippe Reinhard (1647 - 1720)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/197/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Voltaire, François Marie Arouet dit (1694 - 1778)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/296/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Vulliamoz, Daniel (1696 - 1773)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3137/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Waldkirch, Johann Rudolf von (1677 - 1757)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2212/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Warens [-de la Tour], Françoise-Louise de (1699 - 1762)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3370/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Warnery, Charles-Emmanuel (1720-1776)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/107/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Wattenwyl, Alexander Ludwig von (1714 - 1780)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/3218/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Weiss, Andreas (1713-1792) (1713 - 1792)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/557/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Werenfels, Samuel (1657 - 1740)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/108/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Wurtemberg, Louis-Eugène, prince de (1731 - 1795)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/223/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Zimmermann, Johann Georg (1728 - 1795)</a>
+                  </li>
+
+                  <li>
+                    <a href="/fiches/bio/2488/" title="Afficher la biographie dans une nouvelle fenêtre" target="search_result">Zurlauben, Beat Fidel (1720 - 1799)</a>
+                  </li>
+
+                </ul>
+
+
+                </div>
+
+                </div>
+        </mat-tab>
+
+        <mat-tab label="Biographie">
+        </mat-tab>
+
+      </mat-tab-group>
     </mat-tab>
 
   </mat-tab-group>
