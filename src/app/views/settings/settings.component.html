@@ -1,7 +1,27 @@
-<p>
-TODO:
-</p>
-<ul>
-  <li>Knora user infos</li>
-  <li>Change password</li>
-</ul>
+<div class="signin-box" fxLayout="row" fxLayoutAlign="space-around center">
+  <mat-card>
+    <mat-card-content>
+      <h2>
+        <span>Paramètres utilisateur</span>
+      </h2>
+      <p>Nom d'utilisateur : gfaucherand</p>
+      <p>Prénom : Gilles</p>
+      <p>Nom : Faucherand</p>
+      <p>Adresse électronique : gilles.faucherand@unil.ch</p>
+      <p>Groupe : assistants</p>
+      <h2>
+        <span>Changement de mot de passe</span>
+      </h2>
+      <form class="signin-container" #form="ngForm">
+        <mat-form-field>
+          <input matInput placeholder="Mot de passe actuel" type="password" required name="Mot de passe actuel">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Nouveau mot de passe" type="password" required name="Nouveau mot de passe">
+        </mat-form-field>
+        <button mat-raised-button type="submit" [disabled]="form.invalid">Changer
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

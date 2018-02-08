@@ -1,0 +1,12 @@
+.signin-box {
+  margin: 20px;
+  max-width: 400px;
+  max-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signin-container {
+  display: flex;
+  flex-direction: column;
+}
