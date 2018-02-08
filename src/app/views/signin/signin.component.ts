@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'any-signin',
@@ -13,8 +14,13 @@ export class SigninComponent implements OnInit {
     password: ''
   };
   authenticationFailed = false;
+  hide = true;
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    public snackBar: MatSnackBar
+  ) {}
 
   ngOnInit() {}
 
@@ -26,6 +32,10 @@ export class SigninComponent implements OnInit {
       },
       error => {
         this.authenticationFailed = true;
+        this.snackBar.open('Erreur de connection', 'Close', {
+          panelClass: ['snack-bar-color'],
+          duration: 2000
+        });
       }
     );
   }

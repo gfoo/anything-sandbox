@@ -146,3 +146,17 @@ h2 {
   color: white;
   font-size: 11px;
 }
+
+.snack-bar-color {
+  background: transparent url(/assets/images/innovagency/bg-submenu.png) scroll
+  repeat left top;
+  text-shadow: 0 1px 0 #2e2f1e;
+  color: white;
+  font-size: 11px;
+
+  button {
+    text-shadow: 0 1px 0 #2e2f1e;
+    color: white;
+    font-size: 11px;
+  }
+}
