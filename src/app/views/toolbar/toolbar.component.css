@@ -8,10 +8,11 @@
   display: inline-block;
   height: 50%;
   width: 50%;
+  vertical-align: -10px;
 }
 
 .mat-toolbar {
-  height: 50px;
+  height: 40px;
 
   background-image: url('/assets/images/pattern.png'),
     linear-gradient(to bottom, #9f9276, #473c25);
